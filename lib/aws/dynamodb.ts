@@ -1,12 +1,11 @@
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import { DynamoDBDocumentClient } from "@aws-sdk/lib-dynamodb";
 
+// AWS SDK 크리덴셜 자동 탐색:
+// · 로컬 개발 → .env.local 의 AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY
+// · Amplify   → 서비스 Role 임시 자격증명 (자동 주입, 별도 설정 불필요)
 const client = new DynamoDBClient({
   region: process.env.AWS_REGION ?? "ap-northeast-2",
-  credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
-  },
 });
 
 export const dynamodb = DynamoDBDocumentClient.from(client, {

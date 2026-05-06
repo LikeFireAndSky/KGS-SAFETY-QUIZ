@@ -1,12 +1,11 @@
 import { S3Client, GetObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 
+// credentials 미지정 → SDK가 환경에 맞게 자동 선택
+// · 로컬: AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY 환경변수
+// · Amplify: 서비스 Role 임시 자격증명 (자동 주입)
 export const s3 = new S3Client({
   region: process.env.AWS_REGION ?? "ap-northeast-2",
-  credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
-  },
 });
 
 export const S3_BUCKET = "kgs-safety-quiz-bucket";
