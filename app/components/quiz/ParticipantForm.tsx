@@ -424,12 +424,12 @@ export default function ParticipantForm({
           <motion.button
             type="submit"
             disabled={isPending}
-            whileHover={!isPending ? { scale: 1.03, boxShadow: "0 0 30px rgba(249,115,22,0.45)" } : {}}
+            whileHover={!isPending ? { scale: 1.03, boxShadow: "0 0 30px rgba(16,185,129,0.45)" } : {}}
             whileTap={!isPending ? { scale: 0.97 } : {}}
             className="w-full py-4 rounded-2xl font-bold text-white text-lg disabled:opacity-60 disabled:cursor-not-allowed"
             style={{
-              background: "linear-gradient(135deg, #f97316, #ef4444)",
-              boxShadow: "0 0 20px rgba(249,115,22,0.3)",
+              background: "linear-gradient(135deg, #10b981, #059669)",
+              boxShadow: "0 0 20px rgba(16,185,129,0.3)",
             }}
           >
             {isPending ? (
