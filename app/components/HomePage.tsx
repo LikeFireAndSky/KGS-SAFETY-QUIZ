@@ -485,21 +485,23 @@ export default function HomePage() {
           >
             <span aria-hidden="true">🚀</span> 퀴즈 시작하기
           </motion.button>
-          <motion.button
-            type="button"
+          <motion.a
+            href="https://m.blog.naver.com/PostList.naver?blogId=kgs_safety&tab=1"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{
               scale: 1.04,
               boxShadow: "0 0 20px rgba(96,165,250,0.2)",
             }}
             whileTap={{ scale: 0.96 }}
-            className="px-8 py-4 rounded-2xl text-lg font-semibold text-blue-200"
+            className="px-8 py-4 rounded-2xl text-lg font-semibold text-blue-200 flex items-center justify-center"
             style={{
               border: "1px solid rgba(96,165,250,0.3)",
               backdropFilter: "blur(8px)",
             }}
           >
-            <span aria-hidden="true">📖</span> 안전 정보 보기
-          </motion.button>
+            <span aria-hidden="true">📖</span>&nbsp;안전 정보 보기
+          </motion.a>
         </motion.div>
 
         {/* Safety Tip Ticker */}
