@@ -248,9 +248,9 @@ export default function HomePage() {
           </motion.div>
           <div>
             <p className="text-xs text-blue-300 font-medium">
-              한국가스안전공사
+              강원영동
             </p>
-            <p className="text-sm font-bold text-white">강원영동지사</p>
+            <p className="text-sm font-bold text-white">가스안전 퀴즈</p>
           </div>
         </div>
 
@@ -419,7 +419,7 @@ export default function HomePage() {
                 color: "#fb923c",
               }}
             >
-              ✦ 한국가스안전공사 강원영동지사 가스 안전 퀴즈 ✦
+              ✦ 강원영동 가스안전 퀴즈 ✦
             </span>
           </motion.div>
 
@@ -695,7 +695,7 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-sm font-bold text-white">
-                한국가스안전공사 강원영동지사
+                강원영동 가스안전 퀴즈
               </p>
               <p className="text-xs text-blue-400">
                 가스안전 퀴즈왕 · Korea Gas Safety Corporation
@@ -707,7 +707,7 @@ export default function HomePage() {
               📞 1544-4500 (가스 누출 신고 · 24시간)
             </p>
             <p className="text-xs text-blue-500 mt-1">
-              © 2026 한국가스안전공사 강원영동지사. All rights reserved.
+              © 2026 강원영동 가스안전 퀴즈. All rights reserved.
             </p>
           </div>
         </div>
