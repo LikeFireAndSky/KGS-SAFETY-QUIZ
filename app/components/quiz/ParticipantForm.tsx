@@ -88,6 +88,15 @@ export default function ParticipantForm({
   // address 필드는 Daum으로 채우기 때문에 watch로 표시
   const addressValue = watch("address");
 
+  // phone: formatPhone 먼저 실행 후 RHF onChange 호출 → 포맷된 값이 유효성 검사에 반영됨
+  const { onChange: phoneRhfOnChange, ...phoneReg } = register("phone", {
+    required: "전화번호를 입력해주세요.",
+    pattern: {
+      value: /^01[0-9]-\d{3,4}-\d{4}$/,
+      message: "형식을 확인해주세요. (예: 010-1234-5678)",
+    },
+  });
+
   // react-hook-form의 ref와 커스텀 ref 병합
   const { ref: detailRHFRef, ...detailRest } = register("addressDetail");
 
@@ -205,10 +214,14 @@ export default function ParticipantForm({
         >
           {/* ── 이름 ────────────────────────────────── */}
           <div>
-            <label className="block text-sm font-semibold text-blue-200 mb-1.5">
+            <label
+              htmlFor="participant-name"
+              className="block text-sm font-semibold text-blue-200 mb-1.5"
+            >
               이름 <span className="text-orange-400">*</span>
             </label>
             <input
+              id="participant-name"
               {...register("name", {
                 required: "이름을 입력해주세요.",
                 minLength: { value: 2, message: "2글자 이상 입력해주세요." },
@@ -216,38 +229,39 @@ export default function ParticipantForm({
               placeholder="홍길동"
               className={inputCls}
               style={inputStyle}
-              aria-invalid={!!errors.name}
+              aria-describedby={errors.name ? "name-error" : undefined}
             />
             {errors.name && (
-              <p className="mt-1 text-xs text-red-400">{errors.name.message}</p>
+              <p id="name-error" role="alert" className="mt-1 text-xs text-red-400">
+                {errors.name.message}
+              </p>
             )}
           </div>
 
           {/* ── 전화번호 ──────────────────────────────── */}
           <div>
-            <label className="block text-sm font-semibold text-blue-200 mb-1.5">
+            <label
+              htmlFor="participant-phone"
+              className="block text-sm font-semibold text-blue-200 mb-1.5"
+            >
               전화번호 <span className="text-orange-400">*</span>
             </label>
             <input
-              {...register("phone", {
-                required: "전화번호를 입력해주세요.",
-                pattern: {
-                  value: /^01[0-9]-\d{3,4}-\d{4}$/,
-                  message: "형식을 확인해주세요. (예: 010-1234-5678)",
-                },
-                onChange: (e) => {
-                  e.target.value = formatPhone(e.target.value);
-                },
-              })}
+              id="participant-phone"
+              {...phoneReg}
+              onChange={(e) => {
+                e.target.value = formatPhone(e.target.value);
+                phoneRhfOnChange(e);
+              }}
               placeholder="010-1234-5678"
               type="tel"
               inputMode="numeric"
               className={inputCls}
               style={inputStyle}
-              aria-invalid={!!errors.phone}
+              aria-describedby={errors.phone ? "phone-error" : undefined}
             />
             {errors.phone && (
-              <p className="mt-1 text-xs text-red-400">
+              <p id="phone-error" role="alert" className="mt-1 text-xs text-red-400">
                 {errors.phone.message}
               </p>
             )}
@@ -274,7 +288,7 @@ export default function ParticipantForm({
                 className={`${inputCls} flex-1 cursor-default`}
                 style={inputStyle}
                 aria-label="도로명 주소"
-                aria-invalid={!!errors.address}
+                aria-describedby={errors.address ? "address-error" : undefined}
               />
               <motion.button
                 type="button"
@@ -304,7 +318,7 @@ export default function ParticipantForm({
               aria-label="상세 주소"
             />
             {errors.address && (
-              <p className="mt-1 text-xs text-red-400">
+              <p id="address-error" role="alert" className="mt-1 text-xs text-red-400">
                 {errors.address.message}
               </p>
             )}
