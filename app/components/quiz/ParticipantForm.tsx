@@ -337,7 +337,7 @@ export default function ParticipantForm({
               type="button"
               onClick={() => setPrivacyOpen((v) => !v)}
               className="flex items-center justify-between w-full text-sm font-semibold text-blue-200 hover:text-white transition-colors"
-              aria-expanded={privacyOpen}
+              aria-expanded={privacyOpen ? "true" : "false"}
             >
               <span>개인정보 수집·이용 동의 내용 보기</span>
               <motion.span
