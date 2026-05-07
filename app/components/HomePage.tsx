@@ -72,12 +72,6 @@ const SAFETY_TIPS = [
   "⚠️ 가스 기기 주변에 가연성 물질을 두지 마세요",
 ];
 
-const STATS = [
-  { label: "누적 참여자", value: "12,847", suffix: "명", icon: "👥" },
-  { label: "총 문제 수", value: "62", suffix: "문제", icon: "📝" },
-  { label: "평균 정답률", value: "73", suffix: "%", icon: "🎯" },
-  { label: "안전 등급", value: "A+", suffix: "", icon: "🏆" },
-];
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -547,46 +541,6 @@ export default function HomePage() {
               </AnimatePresence>
             </div>
           </div>
-        </motion.div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="relative z-10 px-6 pb-10">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={{
-            visible: { transition: { staggerChildren: 0.1 } },
-            hidden: {},
-          }}
-          className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3"
-        >
-          {STATS.map((stat, i) => (
-            <motion.div
-              key={i}
-              variants={cardVariants}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 8px 30px rgba(96,165,250,0.2)",
-              }}
-              className="rounded-2xl p-4 text-center cursor-default"
-              style={{
-                background: "rgba(255,255,255,0.04)",
-                backdropFilter: "blur(10px)",
-                border: "1px solid rgba(255,255,255,0.08)",
-              }}
-            >
-              <div className="text-2xl mb-1" aria-hidden="true">{stat.icon}</div>
-              <div className="text-xl sm:text-2xl font-black text-white">
-                {stat.value}
-                <span className="text-xs sm:text-sm font-normal text-blue-300 ml-1">
-                  {stat.suffix}
-                </span>
-              </div>
-              <div className="text-xs text-blue-400 mt-1">{stat.label}</div>
-            </motion.div>
-          ))}
         </motion.div>
       </section>
 
