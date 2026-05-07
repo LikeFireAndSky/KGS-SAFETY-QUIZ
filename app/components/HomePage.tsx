@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { getCompletions, getNextQuiz, type QuizCompletion } from "@/lib/quizStorage";
 
 const MotionLink = motion(Link);
 
@@ -28,6 +30,7 @@ const CATEGORIES = [
     accentColor: "#3b82f6",
     badge: "기초",
     href: "/quiz/home-gas",
+    quizName: "home-gas-safety",
   },
   {
     icon: "🔥",
@@ -37,6 +40,7 @@ const CATEGORIES = [
     accentColor: "#f97316",
     badge: "중요",
     href: null,
+    quizName: null,
   },
   {
     icon: "🔧",
@@ -46,6 +50,7 @@ const CATEGORIES = [
     accentColor: "#10b981",
     badge: "실용",
     href: null,
+    quizName: null,
   },
   {
     icon: "📋",
@@ -55,6 +60,7 @@ const CATEGORIES = [
     accentColor: "#8b5cf6",
     badge: "심화",
     href: null,
+    quizName: null,
   },
 ];
 
@@ -102,7 +108,17 @@ const cardVariants: Variants = {
 
 type CatItem = (typeof CATEGORIES)[number];
 
-function CardInner({ cat, available }: { cat: CatItem; available: boolean }) {
+function CardInner({
+  cat,
+  available,
+  completion,
+}: {
+  cat: CatItem;
+  available: boolean;
+  completion?: QuizCompletion;
+}) {
+  const isDone = !!completion;
+
   return (
     <div className="flex items-start gap-4">
       <span className="text-4xl shrink-0" style={{ display: "inline-block" }} aria-hidden="true">
@@ -117,7 +133,15 @@ function CardInner({ cat, available }: { cat: CatItem; available: boolean }) {
           >
             {cat.badge}
           </span>
-          {!available && (
+          {isDone && (
+            <span
+              className="text-xs px-2 py-0.5 rounded-full font-semibold shrink-0"
+              style={{ background: "rgba(34,197,94,0.2)", color: "#4ade80", border: "1px solid rgba(34,197,94,0.35)" }}
+            >
+              ✓ 완료
+            </span>
+          )}
+          {!available && !isDone && (
             <span
               className="text-xs px-2 py-0.5 rounded-full font-semibold text-blue-300 shrink-0"
               style={{ background: "rgba(96,165,250,0.1)", border: "1px solid rgba(96,165,250,0.25)" }}
@@ -130,21 +154,37 @@ function CardInner({ cat, available }: { cat: CatItem; available: boolean }) {
         <div className="flex items-center justify-between">
           <span className="text-xs text-blue-400">{cat.questions}문제</span>
           {available && (
-            <span className="text-sm font-semibold flex items-center gap-1" style={{ color: cat.accentColor }}>
-              도전하기
+            <span className="text-sm font-semibold flex items-center gap-1" style={{ color: isDone ? "#4ade80" : cat.accentColor }}>
+              {isDone ? "다시 도전" : "도전하기"}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
               </svg>
             </span>
           )}
         </div>
+        {isDone && (
+          <p className="text-xs text-green-400/70 mt-1">
+            {completion.score}/{completion.totalQuestions}점 · {new Date(completion.completedAt).toLocaleDateString("ko-KR")} 완료
+          </p>
+        )}
       </div>
     </div>
   );
 }
 
 export default function HomePage() {
+  const router = useRouter();
   const [tipIndex, setTipIndex] = useState(0);
+  const [completions, setCompletions] = useState<Record<string, QuizCompletion>>({});
+
+  useEffect(() => {
+    setCompletions(getCompletions());
+  }, []);
+
+  function handleStartQuiz() {
+    const next = getNextQuiz();
+    router.push(next.href);
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -437,6 +477,7 @@ export default function HomePage() {
         >
           <motion.button
             type="button"
+            onClick={handleStartQuiz}
             whileHover={{
               scale: 1.06,
               boxShadow: "0 0 40px rgba(249,115,22,0.55)",
@@ -595,7 +636,11 @@ export default function HomePage() {
                     border: "1px solid rgba(255,255,255,0.08)",
                   }}
                 >
-                  <CardInner cat={cat} available />
+                  <CardInner
+                    cat={cat}
+                    available
+                    completion={cat.quizName ? completions[cat.quizName] : undefined}
+                  />
                 </MotionLink>
               ) : (
                 <motion.div
@@ -655,6 +700,7 @@ export default function HomePage() {
           </p>
           <motion.button
             type="button"
+            onClick={handleStartQuiz}
             whileHover={{
               scale: 1.06,
               boxShadow: "0 0 40px rgba(249,115,22,0.5)",

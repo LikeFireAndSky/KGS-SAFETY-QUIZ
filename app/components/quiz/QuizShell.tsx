@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useQuiz } from "@/lib/api/quiz";
+import { markCompleted } from "@/lib/quizStorage";
 import QuizHeader from "./QuizHeader";
 import QuizQuestion from "./QuizQuestion";
 import QuizOXButtons from "./QuizOXButtons";
@@ -93,6 +94,7 @@ export default function QuizShell({ quizName }: Props) {
       setIndex((i) => i + 1);
       setPhase("question");
     } else {
+      markCompleted(quizName, score, total);
       setPhase("result");
     }
   }
