@@ -12,7 +12,7 @@ export default function QuizQuestion({ question, questionNumber }: Props) {
   // imageUrl  → 서버에서 생성한 Presigned URL (S3 비공개 버킷)
   // fallback  → public/images 로컬 이미지
   const imageSrc =
-    question.imageUrl ?? `/images/Q${questionNumber}.png`;
+    question.imageUrl ?? `/images/Q${questionNumber}.webp`;
 
   return (
     <>

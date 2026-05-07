@@ -31,6 +31,17 @@ export default function QuizShell({ quizName }: Props) {
     }
   }, [quiz?.questions?.length]);
 
+  // 퀴즈 데이터 로드 직후 모든 이미지 프리로드
+  // → Q1을 푸는 동안 Q2~Q5가 브라우저 캐시에 올라감
+  useEffect(() => {
+    if (!quiz?.questions) return;
+    quiz.questions.forEach((q) => {
+      if (!q.imageUrl) return;
+      const img = new window.Image();
+      img.src = q.imageUrl;
+    });
+  }, [quiz]);
+
   // ── 로딩 ──────────────────────────────────────────────
   if (isLoading) {
     return (
