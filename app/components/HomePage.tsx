@@ -255,17 +255,20 @@ export default function HomePage() {
         </div>
 
         <nav className="hidden md:flex items-center gap-6 text-sm text-blue-200">
-          <a href="#" className="hover:text-white transition-colors">
-            퀴즈 소개
-          </a>
           <a href="#categories" className="hover:text-white transition-colors">
             카테고리
           </a>
-          <a href="#" className="hover:text-white transition-colors">
+          <a
+            href="https://m.blog.naver.com/PostList.naver?blogId=kgs_safety&tab=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white transition-colors"
+          >
             안전 정보
           </a>
-          <motion.a
-            href="#"
+          <motion.button
+            type="button"
+            onClick={handleStartQuiz}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
             className="px-5 py-2 rounded-full text-white font-semibold text-sm cursor-pointer"
@@ -275,7 +278,7 @@ export default function HomePage() {
             }}
           >
             시작하기
-          </motion.a>
+          </motion.button>
         </nav>
 
         <button type="button" className="md:hidden text-white p-1" aria-label="메뉴 열기">
