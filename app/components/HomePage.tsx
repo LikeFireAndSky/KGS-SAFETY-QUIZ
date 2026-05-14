@@ -701,7 +701,7 @@ export default function HomePage() {
                 강원영동 가스안전 퀴즈
               </p>
               <p className="text-xs text-blue-400">
-                가스안전 퀴즈왕 · Korea Gas Safety Corporation
+                가스안전 퀴즈왕 · YeongDong Gas Safety
               </p>
             </div>
           </div>
