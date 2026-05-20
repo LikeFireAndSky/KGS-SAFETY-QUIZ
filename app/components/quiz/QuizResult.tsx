@@ -123,7 +123,7 @@ export default function QuizResult({
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.65 }}
-        className="w-full mb-5"
+        className="w-full mb-5 hidden"
       >
         <AnimatePresence mode="wait">
           {showForm ? (
