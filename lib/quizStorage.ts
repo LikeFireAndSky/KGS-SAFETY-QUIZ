@@ -7,11 +7,15 @@ export interface QuizCompletion {
 /** 추가되는 퀴즈는 여기에 순서대로 등록 */
 export const QUIZ_LIST = [
   {
+    quizName: "restaurant-gas-safety",
+    label: "식당 가스 안전",
+    href: "/quiz/restaurant-gas",
+  },
+  {
     quizName: "home-gas-safety",
     label: "가정 가스 안전",
     href: "/quiz/home-gas",
   },
-  // { quizName: "industrial-gas", label: "산업 가스 안전", href: "/quiz/industrial-gas" },
 ] as const;
 
 export type QuizName = (typeof QUIZ_LIST)[number]["quizName"];
