@@ -1,0 +1,62 @@
+{
+  "QuizName": { "S": "rainy-season-gas-safety" },
+  "category": { "S": "장마철 가스 안전" },
+  "title": { "S": "장마철 가스안전 퀴즈" },
+  "description": { "S": "장마철 침수·강풍 상황에서 반드시 알아야 할 가스 안전 수칙을 O/X 퀴즈로 확인하세요." },
+  "totalQuestions": { "N": "5" },
+  "createdAt": { "S": "2026-07-06T00:00:00.000Z" },
+  "questions": {
+    "L": [
+      {
+        "M": {
+          "id": { "N": "1" },
+          "question": { "S": "장마철 강풍이 지나간 후 보일러 배기통이 흔들리지만 보일러가 정상 작동하므로 그대로 사용해도 된다." },
+          "answer": { "BOOL": false },
+          "answerLabel": { "S": "X (안 됩니다)" },
+          "explanation": { "S": "강풍으로 배기통이 이탈하거나 손상되면 배기가스가 실내로 유입될 수 있으므로 반드시 점검 후 사용해야 합니다." },
+          "imageKey": { "S": "rainy-season-gas-safety/Q1.webp" }
+        }
+      },
+      {
+        "M": {
+          "id": { "N": "2" },
+          "question": { "S": "비가 많이 오는 날 가스 냄새가 나자 환기를 빨리 하기 위해 선풍기를 켰다." },
+          "answer": { "BOOL": false },
+          "answerLabel": { "S": "X (매우 위험합니다)" },
+          "explanation": { "S": "선풍기 스위치를 켜는 과정에서 발생하는 미세한 전기 스파크가 누출된 가스에 점화될 수 있습니다. 먼저 가스밸브를 잠그고 창문을 열어 자연환기해야 합니다." },
+          "imageKey": { "S": "rainy-season-gas-safety/Q2.webp" }
+        }
+      },
+      {
+        "M": {
+          "id": { "N": "3" },
+          "question": { "S": "침수 우려가 있는 LPG 용기를 넘어지지 않도록 단단히 고정해 두었다." },
+          "answer": { "BOOL": true },
+          "answerLabel": { "S": "O (올바릅니다)" },
+          "explanation": { "S": "LPG 용기는 침수나 강풍으로 넘어지거나 이동하지 않도록 안전하게 고정하는 것이 중요합니다." },
+          "imageKey": { "S": "rainy-season-gas-safety/Q3.webp" }
+        }
+      },
+      {
+        "M": {
+          "id": { "N": "4" },
+          "question": { "S": "비가 많이 온 뒤 가스호스와 배관에 이상이 없는지 확인한 후 가스를 사용했다." },
+          "answer": { "BOOL": true },
+          "answerLabel": { "S": "O (올바릅니다)" },
+          "explanation": { "S": "장마철에는 호스와 배관이 손상될 수 있으므로 사용 전에 점검하는 것이 안전합니다." },
+          "imageKey": { "S": "rainy-season-gas-safety/Q4.webp" }
+        }
+      },
+      {
+        "M": {
+          "id": { "N": "5" },
+          "question": { "S": "침수된 가스보일러는 겉만 깨끗이 닦은 뒤 바로 사용했다." },
+          "answer": { "BOOL": false },
+          "answerLabel": { "S": "X (안 됩니다)" },
+          "explanation": { "S": "침수된 가스보일러는 내부 부품이 손상되었을 수 있으므로 반드시 전문가의 안전점검 후 사용해야 합니다." },
+          "imageKey": { "S": "rainy-season-gas-safety/Q5.webp" }
+        }
+      }
+    ]
+  }
+}

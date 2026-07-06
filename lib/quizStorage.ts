@@ -7,6 +7,11 @@ export interface QuizCompletion {
 /** 추가되는 퀴즈는 여기에 순서대로 등록 */
 export const QUIZ_LIST = [
   {
+    quizName: "rainy-season-gas-safety",
+    label: "장마철 가스 안전",
+    href: "/quiz/rainy-season-gas",
+  },
+  {
     quizName: "restaurant-gas-safety",
     label: "식당 가스 안전",
     href: "/quiz/restaurant-gas",
