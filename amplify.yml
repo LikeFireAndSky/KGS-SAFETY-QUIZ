@@ -5,7 +5,7 @@ frontend:
       commands:
         - nvm use 22
         - node --version
-        - npm ci
+        - npm install --cache .npm --prefer-offline
     build:
       commands:
         - echo "APP_REGION=${APP_REGION}" >> .env.production
@@ -19,3 +19,4 @@ frontend:
   cache:
     paths:
       - .next/cache/**/*
+      - .npm/**/*
