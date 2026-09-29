@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/app/i18n/LanguageProvider";
+import LanguageSelector from "@/app/components/LanguageSelector";
 
 interface Props {
   title: string;
@@ -16,6 +18,8 @@ export default function QuizHeader({
   total,
   backHref = "/",
 }: Props) {
+  const { t } = useLanguage();
+
   return (
     <>
       <motion.header
@@ -32,7 +36,7 @@ export default function QuizHeader({
         <Link
           href={backHref}
           className="flex items-center gap-2 text-sm text-blue-300 hover:text-white transition-colors"
-          aria-label="홈으로 돌아가기"
+          aria-label={t("quiz.backAria")}
         >
           <svg
             className="w-4 h-4"
@@ -48,17 +52,20 @@ export default function QuizHeader({
               d="M15 19l-7-7 7-7"
             />
           </svg>
-          홈으로
+          {t("quiz.back")}
         </Link>
 
         <span className="text-sm font-bold text-white">{title}</span>
 
-        <span
-          className="text-sm font-semibold text-blue-300"
-          aria-live="polite"
-        >
-          {index + 1} / {total}
-        </span>
+        <div className="flex items-center gap-2">
+          <LanguageSelector />
+          <span
+            className="text-sm font-semibold text-blue-300"
+            aria-live="polite"
+          >
+            {index + 1} / {total}
+          </span>
+        </div>
       </motion.header>
 
       {/* Progress dots */}

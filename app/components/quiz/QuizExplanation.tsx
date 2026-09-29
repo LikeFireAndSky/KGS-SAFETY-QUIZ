@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/app/i18n/LanguageProvider";
 
 interface Props {
   isCorrect: boolean;
@@ -17,6 +18,8 @@ export default function QuizExplanation({
   isLast,
   onNext,
 }: Props) {
+  const { t } = useLanguage();
+
   return (
     <motion.div
       initial={{ height: 0, opacity: 0 }}
@@ -38,13 +41,13 @@ export default function QuizExplanation({
           className="text-lg font-black mb-1"
           style={{ color: isCorrect ? "#4ade80" : "#f87171" }}
         >
-          {isCorrect ? "✅ 정답!" : "❌ 오답!"}
+          {isCorrect ? t("quiz.correct") : t("quiz.wrong")}
         </p>
         <p
           className="text-sm font-bold mb-3"
           style={{ color: isCorrect ? "#86efac" : "#fca5a5" }}
         >
-          정답 : {answerLabel}
+          {t("quiz.answerIs", { label: answerLabel })}
         </p>
         <p className="text-sm text-blue-100 leading-relaxed">{explanation}</p>
       </motion.div>
@@ -60,7 +63,7 @@ export default function QuizExplanation({
           boxShadow: "0 0 20px rgba(249,115,22,0.3)",
         }}
       >
-        {isLast ? "결과 보기 🏆" : "다음 문제 →"}
+        {isLast ? t("quiz.showResult") : t("quiz.next")}
       </motion.button>
     </motion.div>
   );

@@ -134,6 +134,61 @@ describe("GET /api/quiz/[quizName]", () => {
     expect(mockGetS3PresignedUrl).toHaveBeenCalledWith("home-gas-safety/Q1.webp");
   });
 
+  // ── 다국어 ──────────────────────────────────────────────
+  describe("lang 파라미터", () => {
+    const TRANSLATED_QUIZ = {
+      ...MOCK_QUIZ,
+      translations: {
+        en: {
+          title: "Home Gas Safety",
+          questions: [
+            { id: 1, question: "Q1 en", answerLabel: "O (Yes)", explanation: "Explanation en" },
+            { id: 2, question: "Q2 en" }, // answerLabel·explanation 없음 → 한국어 대체
+          ],
+        },
+      },
+    };
+
+    async function getBody(lang?: string) {
+      mockSend.mockResolvedValue({ Item: TRANSLATED_QUIZ });
+      const res = createRes();
+      await handler(createReq({ query: { quizName: "home-gas-safety", ...(lang && { lang }) } }), res);
+      expect(res.status).toHaveBeenCalledWith(200);
+      return (res.json as ReturnType<typeof vi.fn>).mock.calls[0][0];
+    }
+
+    it("번역이 있으면 제목과 문항을 해당 언어로 덮어쓴다", async () => {
+      const body = await getBody("en");
+      expect(body.title).toBe("Home Gas Safety");
+      expect(body.questions[0]).toMatchObject({
+        question: "Q1 en",
+        answerLabel: "O (Yes)",
+        explanation: "Explanation en",
+        answer: true,
+      });
+    });
+
+    it("번역이 빠진 항목은 한국어 원문을 유지한다", async () => {
+      const body = await getBody("en");
+      expect(body.category).toBe("home");
+      expect(body.questions[1]).toMatchObject({ question: "Q2 en", answerLabel: "X", explanation: "해설2" });
+    });
+
+    it("번역이 없는 언어나 lang 미지정 시 한국어 원문을 반환한다", async () => {
+      for (const lang of ["fr", undefined]) {
+        const body = await getBody(lang);
+        expect(body.title).toBe("가정 가스 안전");
+        expect(body.questions[0].question).toBe("Q1");
+        vi.clearAllMocks();
+      }
+    });
+
+    it("translations 필드는 응답에 포함하지 않는다", async () => {
+      const body = await getBody("en");
+      expect(body).not.toHaveProperty("translations");
+    });
+  });
+
   // ── DynamoDB 오류 ────────────────────────────────────────
   it("DynamoDB 오류 시 500을 반환한다", async () => {
     mockSend.mockRejectedValue(new Error("DB error"));

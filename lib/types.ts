@@ -8,6 +8,19 @@ export interface QuizQuestion {
   imageUrl?: string;  // Presigned URL  (서버에서 생성, 1시간 유효)
 }
 
+/** 언어별 퀴즈 번역 — 비어 있는 항목은 한국어 원문으로 대체 */
+export interface QuizTranslation {
+  title?: string;
+  category?: string;
+  description?: string;
+  questions?: {
+    id: number;          // QuizQuestion.id 와 매칭
+    question?: string;
+    answerLabel?: string;
+    explanation?: string;
+  }[];
+}
+
 export interface Quiz {
   QuizName: string;      // DynamoDB Partition Key
   category: string;
@@ -15,6 +28,7 @@ export interface Quiz {
   description?: string;
   questions: QuizQuestion[];
   createdAt: string;
+  translations?: Record<string, QuizTranslation>; // 언어 코드(en, zh …) → 번역
 }
 
 export interface Participant {

@@ -58,5 +58,591 @@
         }
       }
     ]
+  },
+  "translations": {
+    "M": {
+      "en": {
+        "M": {
+          "title": {
+            "S": "Home Gas Safety Quiz"
+          },
+          "category": {
+            "S": "Home Gas Safety"
+          },
+          "description": {
+            "S": "Check how to use gas safely at home with an O/X quiz."
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "If the gas stove goes out while cooking, is it okay to relight it right away?"
+                  },
+                  "answerLabel": {
+                    "S": "X (No)"
+                  },
+                  "explanation": {
+                    "S": "While the flame was out, gas may have spread through the room. Relighting right away can ignite the built-up gas and cause an explosion or fire. Always open the windows to ventilate thoroughly, make sure there is no gas smell, and then relight."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "Do butane gas canisters have an expiration date?"
+                  },
+                  "answerLabel": {
+                    "S": "O (Yes)"
+                  },
+                  "explanation": {
+                    "S": "Butane canisters expire 7 years after the date of manufacture. Old canisters can corrode inside, causing gas leaks or deformation. Check the manufacturing date on the bottom or side of the canister and do not use expired products."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "Is it okay to use a grill plate or pot that is larger than the gas burner?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Dangerous)"
+                  },
+                  "explanation": {
+                    "S": "Using a grill plate larger than the burner (an oversized plate) makes the flame spread sideways, greatly increasing the risk of fire and burns. It can also cause incomplete combustion, which produces carbon monoxide. Use grill plates and pots that fit the size of the burner."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "Is it okay to run a gas boiler when its exhaust pipe is disconnected?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Very dangerous)"
+                  },
+                  "explanation": {
+                    "S": "If the boiler runs with the exhaust pipe disconnected, the carbon monoxide produced by combustion flows straight into the room. Carbon monoxide is colorless and odorless, so it is hard to detect, and it can cause loss of consciousness or death within a short time. Always check that the exhaust pipe is properly connected before use."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "Is it okay to turn on the ventilation fan when you suspect a gas leak?"
+                  },
+                  "answerLabel": {
+                    "S": "X (No)"
+                  },
+                  "explanation": {
+                    "S": "Do not turn on any electrical device, including ventilation fans. Even the tiny spark made when you flip a switch can ignite the gas and cause an explosion. If you smell gas, do not touch electrical devices. Open windows and doors by hand to ventilate, evacuate immediately, and report it to the gas supplier (Korea Gas Safety Corporation ☎ 1544-4500)."
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "zh": {
+        "M": {
+          "title": {
+            "S": "家庭燃气安全问答"
+          },
+          "category": {
+            "S": "家庭燃气安全"
+          },
+          "description": {
+            "S": "通过O/X问答确认在家中安全使用燃气的方法。"
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "做饭时燃气灶熄火了，马上重新点火没有问题吗？"
+                  },
+                  "answerLabel": {
+                    "S": "X（不可以）"
+                  },
+                  "explanation": {
+                    "S": "火熄灭期间，燃气可能已经扩散到室内。如果马上点火，火焰接触到积聚的燃气，可能引发爆炸或火灾。请务必先打开窗户充分通风，确认没有燃气味后再重新点火。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "丁烷气罐也有有效期吗？"
+                  },
+                  "answerLabel": {
+                    "S": "O（有）"
+                  },
+                  "explanation": {
+                    "S": "丁烷气罐自生产日期起有效期为7年。旧气罐可能因内部腐蚀而漏气或变形。请确认罐底或侧面标注的生产日期，不要使用过期产品。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "使用比燃气炉更大的烤盘或锅没有问题吗？"
+                  },
+                  "answerLabel": {
+                    "S": "X（危险）"
+                  },
+                  "explanation": {
+                    "S": "使用比炉头更大的烤盘（过大烤盘）会使火焰向旁边扩散，大大增加火灾和烫伤的危险。此外，不完全燃烧还可能产生一氧化碳。请使用与炉头大小相符的烤盘和锅。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "燃气锅炉运行时，排气管脱落也没关系吗？"
+                  },
+                  "answerLabel": {
+                    "S": "X（非常危险）"
+                  },
+                  "explanation": {
+                    "S": "在排气管脱落的状态下运行锅炉，燃烧过程中产生的一氧化碳会直接进入室内。一氧化碳无色无味，难以察觉，短时间内就可能导致失去意识甚至死亡，非常危险。使用前请务必确认排气管的连接状态。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "怀疑燃气泄漏时，可以打开排风扇吗？"
+                  },
+                  "answerLabel": {
+                    "S": "X（不可以）"
+                  },
+                  "explanation": {
+                    "S": "请不要打开包括排风扇在内的任何电器。按下开关瞬间产生的微小火花就足以点燃燃气引发爆炸。闻到燃气味时，请不要触碰电器，用手直接打开门窗通风，然后立即撤离，并向燃气供应公司（韩国燃气安全公社 ☎ 1544-4500）报告。"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "ja": {
+        "M": {
+          "title": {
+            "S": "家庭のガス安全クイズ"
+          },
+          "category": {
+            "S": "家庭のガス安全"
+          },
+          "description": {
+            "S": "家庭でガスを安全に使う方法をO/Xクイズで確認してみましょう。"
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "調理中に消えたガスコンロ、すぐに再点火しても問題ない？"
+                  },
+                  "answerLabel": {
+                    "S": "X（いけません）"
+                  },
+                  "explanation": {
+                    "S": "火が消えている間に、ガスが室内に広がっている可能性があります。すぐに点火すると、たまったガスに火が触れて爆発や火災につながるおそれがあります。必ず窓を開けて十分に換気し、ガスのにおいがしないことを確認してから再点火してください。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "カセットボンベ（ブタンガス）にも使用期限がある？"
+                  },
+                  "answerLabel": {
+                    "S": "O（あります）"
+                  },
+                  "explanation": {
+                    "S": "カセットボンベには製造日から7年の使用期限があります。古いボンベは内部の腐食でガス漏れや変形が起こることがあります。ボンベの底や側面に記載された製造日を確認し、期限切れの製品は使わないでください。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "ガスバーナーより大きい鉄板や鍋を使っても問題ない？"
+                  },
+                  "answerLabel": {
+                    "S": "X（危険です）"
+                  },
+                  "explanation": {
+                    "S": "バーナーより大きい鉄板（過大な鉄板）を使うと炎が横に広がり、火災ややけどの危険が大きく高まります。また、不完全燃焼で一酸化炭素が発生することがあります。鉄板や鍋はバーナーの大きさに合ったものを使いましょう。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "ガスボイラーの作動中に排気筒が外れていても大丈夫？"
+                  },
+                  "answerLabel": {
+                    "S": "X（非常に危険です）"
+                  },
+                  "explanation": {
+                    "S": "排気筒が外れた状態でボイラーを動かすと、燃焼で発生した一酸化炭素がそのまま室内に流れ込みます。一酸化炭素は無色・無臭で気づきにくく、短時間で意識を失ったり死亡したりするおそれがある非常に危険な状況です。必ず排気筒の接続状態を確認してから使用してください。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "ガス漏れが疑われるとき、換気扇を回してもいい？"
+                  },
+                  "answerLabel": {
+                    "S": "X（いけません）"
+                  },
+                  "explanation": {
+                    "S": "換気扇を含むすべての電気機器はつけないでください。スイッチを入れた瞬間に出るわずかな火花だけでもガスに引火し、爆発が起こることがあります。ガスのにおいがしたら電気機器には触れず、窓やドアを手で開けて換気し、すぐに避難してガス供給会社（韓国ガス安全公社 ☎ 1544-4500）に通報してください。"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "vi": {
+        "M": {
+          "title": {
+            "S": "Đố vui an toàn gas tại nhà"
+          },
+          "category": {
+            "S": "An toàn gas tại nhà"
+          },
+          "description": {
+            "S": "Kiểm tra cách sử dụng gas an toàn tại nhà qua câu đố O/X."
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "Bếp gas bị tắt khi đang nấu ăn, bật lửa lại ngay có sao không?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Không được)"
+                  },
+                  "explanation": {
+                    "S": "Trong lúc lửa tắt, gas có thể đã lan ra trong phòng. Nếu bật lửa ngay, tia lửa gặp lượng gas tích tụ có thể gây nổ hoặc cháy. Hãy mở cửa sổ để thông gió thật kỹ, kiểm tra không còn mùi gas rồi mới bật lửa lại."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "Bình gas butan (gas mini) cũng có hạn sử dụng phải không?"
+                  },
+                  "answerLabel": {
+                    "S": "O (Có)"
+                  },
+                  "explanation": {
+                    "S": "Bình gas butan có hạn sử dụng 7 năm kể từ ngày sản xuất. Bình cũ có thể bị ăn mòn bên trong, gây rò rỉ gas hoặc biến dạng. Hãy kiểm tra ngày sản xuất ghi ở đáy hoặc thân bình và không sử dụng sản phẩm đã hết hạn."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "Dùng vỉ nướng hoặc nồi lớn hơn bếp gas có sao không?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Nguy hiểm)"
+                  },
+                  "explanation": {
+                    "S": "Dùng vỉ nướng lớn hơn bếp (vỉ quá khổ) khiến ngọn lửa lan ra hai bên, làm tăng mạnh nguy cơ cháy và bỏng. Ngoài ra, cháy không hoàn toàn có thể sinh ra khí CO. Hãy dùng vỉ nướng và nồi vừa với kích thước bếp."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "Khi nồi hơi gas đang chạy mà ống xả bị tuột ra thì có sao không?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Rất nguy hiểm)"
+                  },
+                  "explanation": {
+                    "S": "Nếu vận hành nồi hơi khi ống xả bị tuột, khí CO sinh ra trong quá trình đốt sẽ tràn thẳng vào trong nhà. Khí CO không màu, không mùi nên rất khó phát hiện, và có thể khiến người bị ngất hoặc tử vong trong thời gian ngắn. Hãy luôn kiểm tra ống xả đã được nối chắc chắn trước khi sử dụng."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "Khi nghi ngờ rò rỉ gas, có được bật quạt thông gió không?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Không được)"
+                  },
+                  "explanation": {
+                    "S": "Không bật bất kỳ thiết bị điện nào, kể cả quạt thông gió. Chỉ một tia lửa điện rất nhỏ khi bật công tắc cũng có thể làm gas bắt lửa và gây nổ. Khi ngửi thấy mùi gas, đừng chạm vào thiết bị điện; hãy tự tay mở cửa sổ và cửa ra vào để thông gió, sơ tán ngay và báo cho đơn vị cung cấp gas (Tổng công ty An toàn Khí gas Hàn Quốc ☎ 1544-4500)."
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "lo": {
+        "M": {
+          "title": {
+            "S": "ຄຳຖາມຄວາມປອດໄພແກັສໃນເຮືອນ"
+          },
+          "category": {
+            "S": "ຄວາມປອດໄພແກັສໃນເຮືອນ"
+          },
+          "description": {
+            "S": "ກວດສອບວິທີໃຊ້ແກັສໃນເຮືອນຢ່າງປອດໄພດ້ວຍຄຳຖາມ O/X."
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "ເຕົາແກັສດັບໃນຂະນະທີ່ກຳລັງແຕ່ງອາຫານ, ຈູດໄຟຄືນທັນທີບໍ່ມີບັນຫາບໍ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (ບໍ່ໄດ້)"
+                  },
+                  "explanation": {
+                    "S": "ໃນຂະນະທີ່ໄຟດັບ ແກັສອາດແຜ່ກະຈາຍຢູ່ໃນຫ້ອງແລ້ວ. ຖ້າຈູດໄຟທັນທີ ປະກາຍໄຟອາດສຳຜັດກັບແກັສທີ່ສະສົມຢູ່ ແລະ ເຮັດໃຫ້ເກີດການລະເບີດ ຫຼື ໄຟໄໝ້. ຕ້ອງເປີດປ່ອງຢ້ຽມລະບາຍອາກາດໃຫ້ພຽງພໍ, ກວດໃຫ້ແນ່ໃຈວ່າບໍ່ມີກິ່ນແກັສ ແລ້ວຈຶ່ງຈູດໄຟຄືນ."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "ກະປ໋ອງແກັສບິວເທນ (ແກັສກະປ໋ອງ) ກໍມີວັນໝົດອາຍຸບໍ?"
+                  },
+                  "answerLabel": {
+                    "S": "O (ມີ)"
+                  },
+                  "explanation": {
+                    "S": "ກະປ໋ອງແກັສບິວເທນມີອາຍຸການໃຊ້ງານ 7 ປີນັບແຕ່ວັນຜະລິດ. ກະປ໋ອງເກົ່າອາດເປັນສະນິມຢູ່ພາຍໃນ ເຮັດໃຫ້ແກັສຮົ່ວ ຫຼື ກະປ໋ອງຜິດຮູບ. ໃຫ້ກວດເບິ່ງວັນຜະລິດທີ່ຂຽນຢູ່ລຸ່ມ ຫຼື ຂ້າງກະປ໋ອງ ແລະ ຢ່າໃຊ້ຜະລິດຕະພັນທີ່ໝົດອາຍຸແລ້ວ."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "ໃຊ້ແຜ່ນປີ້ງ ຫຼື ໝໍ້ທີ່ໃຫຍ່ກວ່າເຕົາແກັສບໍ່ມີບັນຫາບໍ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (ອັນຕະລາຍ)"
+                  },
+                  "explanation": {
+                    "S": "ການໃຊ້ແຜ່ນປີ້ງທີ່ໃຫຍ່ກວ່າເຕົາ (ແຜ່ນປີ້ງໃຫຍ່ເກີນ) ເຮັດໃຫ້ແປວໄຟແຜ່ອອກທາງຂ້າງ ແລະ ເພີ່ມຄວາມສ່ຽງຕໍ່ໄຟໄໝ້ ແລະ ບາດແຜໄຟລວກຢ່າງຫຼວງຫຼາຍ. ນອກຈາກນີ້ ການເຜົາໄໝ້ບໍ່ສົມບູນອາດເຮັດໃຫ້ເກີດອາຍແກັສຄາບອນມໍໂນໄຊ. ໃຫ້ໃຊ້ແຜ່ນປີ້ງ ແລະ ໝໍ້ທີ່ເໝາະກັບຂະໜາດຂອງເຕົາ."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "ໃນຂະນະທີ່ໝໍ້ຕົ້ມນ້ຳຮ້ອນແກັສ (ບອຍເລີ) ເຮັດວຽກ ທໍ່ລະບາຍອາຍຫຼຸດອອກກໍບໍ່ເປັນຫຍັງບໍ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (ອັນຕະລາຍຫຼາຍ)"
+                  },
+                  "explanation": {
+                    "S": "ຖ້າເປີດບອຍເລີໃນຂະນະທີ່ທໍ່ລະບາຍອາຍຫຼຸດອອກ ອາຍແກັສຄາບອນມໍໂນໄຊທີ່ເກີດຈາກການເຜົາໄໝ້ຈະໄຫຼເຂົ້າມາໃນຫ້ອງໂດຍກົງ. ຄາບອນມໍໂນໄຊບໍ່ມີສີ ບໍ່ມີກິ່ນ ຈຶ່ງກວດພົບໄດ້ຍາກ ແລະ ອາດເຮັດໃຫ້ໝົດສະຕິ ຫຼື ເສຍຊີວິດພາຍໃນເວລາສັ້ນໆ. ຕ້ອງກວດການເຊື່ອມຕໍ່ຂອງທໍ່ລະບາຍອາຍທຸກຄັ້ງກ່ອນໃຊ້."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "ເມື່ອສົງໄສວ່າແກັສຮົ່ວ ເປີດພັດລົມດູດອາກາດໄດ້ບໍ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (ບໍ່ໄດ້)"
+                  },
+                  "explanation": {
+                    "S": "ຢ່າເປີດອຸປະກອນໄຟຟ້າໃດໆ ລວມທັງພັດລົມດູດອາກາດ. ພຽງແຕ່ປະກາຍໄຟນ້ອຍໆທີ່ເກີດຂຶ້ນຕອນກົດສະວິດ ກໍສາມາດເຮັດໃຫ້ແກັສລຸກໄໝ້ ແລະ ລະເບີດໄດ້. ເມື່ອໄດ້ກິ່ນແກັສ ຢ່າແຕະອຸປະກອນໄຟຟ້າ, ໃຫ້ໃຊ້ມືເປີດປ່ອງຢ້ຽມ ແລະ ປະຕູເພື່ອລະບາຍອາກາດ, ອົບພະຍົບອອກທັນທີ ແລະ ແຈ້ງບໍລິສັດສະໜອງແກັສ (ບໍລິສັດຄວາມປອດໄພແກັສເກົາຫຼີ ☎ 1544-4500)."
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "ne": {
+        "M": {
+          "title": {
+            "S": "घरको ग्यास सुरक्षा क्विज"
+          },
+          "category": {
+            "S": "घरको ग्यास सुरक्षा"
+          },
+          "description": {
+            "S": "घरमा ग्यास सुरक्षित रूपमा प्रयोग गर्ने तरिका O/X क्विजमार्फत जाँच्नुहोस्।"
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "खाना पकाउँदा ग्यास चुलो निभ्यो भने तुरुन्तै फेरि बाल्दा समस्या हुँदैन?"
+                  },
+                  "answerLabel": {
+                    "S": "X (हुँदैन)"
+                  },
+                  "explanation": {
+                    "S": "आगो निभेको बेला ग्यास कोठाभित्र फैलिसकेको हुन सक्छ। तुरुन्तै बाल्दा जम्मा भएको ग्यासमा आगोको झिल्का पुगेर विस्फोट वा आगलागी हुन सक्छ। अनिवार्य रूपमा झ्याल खोलेर राम्ररी हावा चलाउनुहोस्, ग्यासको गन्ध नभएको पक्का गरेपछि मात्र फेरि बाल्नुहोस्।"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "ब्युटेन ग्यासको क्यानको पनि म्याद हुन्छ?"
+                  },
+                  "answerLabel": {
+                    "S": "O (हुन्छ)"
+                  },
+                  "explanation": {
+                    "S": "ब्युटेन ग्यासको क्यानको म्याद उत्पादन मितिदेखि ७ वर्ष हुन्छ। पुरानो क्यान भित्रबाट खिया लागेर ग्यास चुहिन वा क्यान बाङ्गिन सक्छ। क्यानको पिँध वा छेउमा लेखिएको उत्पादन मिति जाँच्नुहोस् र म्याद नाघेको सामान प्रयोग नगर्नुहोस्।"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "ग्यास बर्नरभन्दा ठूलो ग्रिल प्लेट वा भाँडो प्रयोग गर्दा समस्या हुँदैन?"
+                  },
+                  "answerLabel": {
+                    "S": "X (खतरनाक छ)"
+                  },
+                  "explanation": {
+                    "S": "बर्नरभन्दा ठूलो ग्रिल प्लेट (अति ठूलो प्लेट) प्रयोग गर्दा आगोको ज्वाला छेउतिर फैलिन्छ र आगलागी तथा पोल्ने जोखिम धेरै बढ्छ। साथै अपूर्ण दहनले कार्बन मोनोअक्साइड उत्पन्न हुन सक्छ। बर्नरको आकार सुहाउँदो ग्रिल प्लेट र भाँडो प्रयोग गर्नुहोस्।"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "ग्यास बोइलर चलिरहेको बेला धुवाँ निकास पाइप निस्किएको भए पनि ठीक छ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (अत्यन्त खतरनाक छ)"
+                  },
+                  "explanation": {
+                    "S": "निकास पाइप निस्किएको अवस्थामा बोइलर चलाउँदा दहनबाट निस्कने कार्बन मोनोअक्साइड सिधै कोठाभित्र पस्छ। कार्बन मोनोअक्साइड रङहीन र गन्धहीन भएकाले थाहा पाउन गाह्रो हुन्छ, र छोटो समयमै बेहोस हुने वा मृत्यु हुने अत्यन्त खतरनाक अवस्था आउन सक्छ। प्रयोग गर्नुअघि निकास पाइपको जडान अनिवार्य रूपमा जाँच्नुहोस्।"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "ग्यास चुहावटको शंका लागेमा भेन्टिलेसन फ्यान चलाउन हुन्छ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (हुँदैन)"
+                  },
+                  "explanation": {
+                    "S": "भेन्टिलेसन फ्यानसहित कुनै पनि बिजुलीका उपकरण नचलाउनुहोस्। स्विच थिच्दा निस्कने सानो झिल्काले मात्र पनि ग्यासमा आगो लागेर विस्फोट हुन सक्छ। ग्यासको गन्ध आएमा बिजुलीका उपकरण नछुनुहोस्; हातैले झ्याल र ढोका खोलेर हावा चलाउनुहोस्, तुरुन्तै बाहिर निस्कनुहोस् र ग्यास आपूर्ति कम्पनी (कोरिया ग्यास सुरक्षा निगम ☎ 1544-4500) मा खबर गर्नुहोस्।"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
   }
 }

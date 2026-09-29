@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import type { QuizQuestion as QuizQuestionType } from "@/lib/types";
+import { useLanguage } from "@/app/i18n/LanguageProvider";
 
 interface Props {
   question: QuizQuestionType;
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export default function QuizQuestion({ question, questionNumber }: Props) {
+  const { t } = useLanguage();
   // imageUrl  → 서버에서 생성한 Presigned URL (S3 비공개 버킷)
   // fallback  → public/images 로컬 이미지
   const imageSrc =
@@ -23,7 +25,7 @@ export default function QuizQuestion({ question, questionNumber }: Props) {
       >
         <Image
           src={imageSrc}
-          alt={`문제 ${questionNumber} 관련 이미지`}
+          alt={t("quiz.imageAlt", { n: questionNumber })}
           width={600}
           height={600}
           className="w-full h-auto"

@@ -1,0 +1,720 @@
+{
+  "QuizName": {
+    "S": "restaurant-gas-safety"
+  },
+  "category": {
+    "S": "식당 가스 안전"
+  },
+  "createdAt": {
+    "S": "2026-05-15T00:00:00.000Z"
+  },
+  "description": {
+    "S": "식당·음식점에서 반드시 알아야 할 가스 안전 수칙을 O/X 퀴즈로 확인하세요."
+  },
+  "questions": {
+    "L": [
+      {
+        "M": {
+          "answer": {
+            "BOOL": false
+          },
+          "answerLabel": {
+            "S": "X (위험합니다)"
+          },
+          "explanation": {
+            "S": "휴대용 가스레인지의 덮개(삼발이)보다 넓은 조리기구를 사용하면, 조리기구에서 발생하는 뜨거운 복사열이 내장된 부탄캔으로 고스란히 전달됩니다. 이로 인해 부탄캔 내부 압력이 상승하여 폭발할 위험이 매우 높으므로, 반드시 적정 크기의 조리기구를 사용해야 합니다.\n💡 \"불판은 작게, 안전은 크게! 가스레인지를 덮는 과대 불판은 절대 안 돼요!\""
+          },
+          "id": {
+            "N": "1"
+          },
+          "imageKey": {
+            "S": "restaurant-gas-safety/Q1.webp"
+          },
+          "question": {
+            "S": "손님상에 나가는 전골을 끓일 때, 휴대용 가스레인지보다 훨씬 큰 불판이나 냄비를 사용해도 괜찮다?"
+          }
+        }
+      },
+      {
+        "M": {
+          "answer": {
+            "BOOL": false
+          },
+          "answerLabel": {
+            "S": "X (불충분합니다)"
+          },
+          "explanation": {
+            "S": "점화 손잡이를 끄는 것은 일차적인 차단일 뿐입니다. 완벽한 가스 누출 차단과 안전을 위해서는 가스 배관에 연결된 노란색 '중간밸브'까지 반드시 잠가야 합니다. 영업이 끝난 후 빈 가게에서 발생할 수 있는 만일의 사고를 예방하는 가장 확실한 방법입니다.\n💡 \"퇴근 전 마지막 임무! 점화 손잡이 끄고, 중간밸브 잠그고!\""
+          },
+          "id": {
+            "N": "2"
+          },
+          "imageKey": {
+            "S": "restaurant-gas-safety/Q2.webp"
+          },
+          "question": {
+            "S": "바쁜 영업 마감 시간, 가스레인지의 점화 손잡이만 확실히 끄고 퇴근하면 안전하다?"
+          }
+        }
+      },
+      {
+        "M": {
+          "answer": {
+            "BOOL": false
+          },
+          "answerLabel": {
+            "S": "X (절대 안 됩니다)"
+          },
+          "explanation": {
+            "S": "가스가 누출되었을 때 환풍기를 켜거나 전등 스위치를 조작하면, 기기 내부에서 발생하는 미세한 전기 스파크가 가스 폭발의 직접적인 점화원이 될 수 있습니다. 절대 전자기기를 조작하지 말고, 창문과 출입문을 활짝 열어 빗자루나 부채 등을 이용해 자연스럽게 가스를 밖으로 쓸어내듯 환기해야 합니다.\n💡 \"가스 냄새가 날 땐 전기 스위치 절대 금지! 오직 창문만 활짝 열어주세요!\""
+          },
+          "id": {
+            "N": "3"
+          },
+          "imageKey": {
+            "S": "restaurant-gas-safety/Q3.webp"
+          },
+          "question": {
+            "S": "주방에 원인 모를 퀴퀴한 가스 냄새가 짙게 날 때는, 즉시 환풍기를 켜서 가스를 밖으로 빼내야 한다?"
+          }
+        }
+      },
+      {
+        "M": {
+          "answer": {
+            "BOOL": false
+          },
+          "answerLabel": {
+            "S": "X (위험합니다)"
+          },
+          "explanation": {
+            "S": "가스가 안전하게 타오르려면 넉넉한 산소가 필요합니다. 창문을 꽉 닫은 채 환기 후드만 작동시키면 주방 내부의 산소가 급격히 부족해져 불완전 연소가 일어납니다. 이 과정에서 무색무취의 치명적인 일산화탄소(CO)가 발생하므로, 조리 시에는 반드시 창문이나 급기구를 열어 신선한 공기가 계속 들어오도록 해야 합니다.\n💡 \"후드를 켤 땐 창문도 짝꿍! 신선한 공기가 들어와야 일산화탄소를 막을 수 있어요!\""
+          },
+          "id": {
+            "N": "4"
+          },
+          "imageKey": {
+            "S": "restaurant-gas-safety/Q4.webp"
+          },
+          "question": {
+            "S": "주방에서 대형 솥에 육수를 장시간 끓일 때, 냉난방 효율을 위해 창문을 모두 닫고 환기 후드(배풍기)만 켜두어도 충분하다?"
+          }
+        }
+      },
+      {
+        "M": {
+          "answer": {
+            "BOOL": false
+          },
+          "answerLabel": {
+            "S": "X (매우 위험합니다)"
+          },
+          "explanation": {
+            "S": "가스레인지, 오븐, 난로 등 화기 주변에 부탄캔을 보관하면 주변의 뜨거운 열기 때문에 부탄캔 내부의 가스가 팽창하게 됩니다. 캔이 압력을 견디지 못하면 대형 폭발 사고로 이어질 수 있습니다. 부탄캔은 반드시 화기와 멀리 떨어진, 통풍이 잘되고 직사광선이 닿지 않는 서늘한 곳에 보관해야 합니다.\n💡 \"부탄캔은 열을 싫어해요! 불 옆은 피하고 서늘한 곳에 보관해 주세요!\""
+          },
+          "id": {
+            "N": "5"
+          },
+          "imageKey": {
+            "S": "restaurant-gas-safety/Q5.webp"
+          },
+          "question": {
+            "S": "식당에서 자주 사용하는 부탄캔은 교체하기 편하도록 가스레인지 바로 옆이나 화기 근처에 쌓아두고 보관하는 것이 좋다?"
+          }
+        }
+      }
+    ]
+  },
+  "title": {
+    "S": "식당 가스 안전 퀴즈"
+  },
+  "totalQuestions": {
+    "N": "5"
+  },
+  "translations": {
+    "M": {
+      "en": {
+        "M": {
+          "title": {
+            "S": "Restaurant Gas Safety Quiz"
+          },
+          "category": {
+            "S": "Restaurant Gas Safety"
+          },
+          "description": {
+            "S": "Check the gas safety rules every restaurant and eatery must know with an O/X quiz."
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "When cooking a hot pot for customers' tables, it is okay to use a grill plate or pot much larger than the portable gas stove?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Dangerous)"
+                  },
+                  "explanation": {
+                    "S": "If you use cookware wider than the portable stove's trivet, the hot radiant heat from the cookware is transferred directly to the built-in butane canister. This raises the pressure inside the canister and creates a very high risk of explosion, so always use cookware of an appropriate size.\n💡 \"Small plate, big safety! Never use an oversized plate that covers the gas stove!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "At busy closing time, it is safe to go home after just turning off the stove's ignition knob?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Not enough)"
+                  },
+                  "explanation": {
+                    "S": "Turning off the ignition knob is only the first step. To completely block gas leaks and stay safe, you must also close the yellow 'middle valve' on the gas pipe. This is the surest way to prevent accidents in an empty restaurant after closing.\n💡 \"Last task before leaving! Turn off the ignition knob and close the middle valve!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "When there is a strong, stale gas smell of unknown origin in the kitchen, you should turn on the ventilation fan right away to get the gas out?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Absolutely not)"
+                  },
+                  "explanation": {
+                    "S": "If you turn on a ventilation fan or a light switch during a gas leak, the tiny electric spark inside the device can directly ignite the gas and cause an explosion. Never operate electrical devices. Open windows and doors wide and ventilate naturally, sweeping the gas out with a broom or a fan.\n💡 \"When you smell gas, never touch electric switches! Just open the windows wide!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "When boiling broth in a large pot in the kitchen for a long time, it is enough to close all windows for heating and cooling efficiency and just run the range hood?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Dangerous)"
+                  },
+                  "explanation": {
+                    "S": "Gas needs plenty of oxygen to burn safely. If you only run the range hood with the windows shut tight, the kitchen quickly runs out of oxygen and incomplete combustion occurs. This produces deadly, colorless and odorless carbon monoxide (CO), so while cooking always open a window or air inlet so fresh air keeps coming in.\n💡 \"When the hood is on, open a window too! Fresh air is what keeps carbon monoxide away!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "It is best to stack butane canisters, which restaurants use often, right next to the gas stove or near a flame so they are easy to replace?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Very dangerous)"
+                  },
+                  "explanation": {
+                    "S": "If you store butane canisters near heat sources such as gas stoves, ovens or heaters, the surrounding heat makes the gas inside expand. If a canister cannot withstand the pressure, it can cause a major explosion. Always store butane canisters in a cool, well-ventilated place away from flames and out of direct sunlight.\n💡 \"Butane canisters hate heat! Keep them away from flames and store them in a cool place!\""
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "zh": {
+        "M": {
+          "title": {
+            "S": "餐厅燃气安全问答"
+          },
+          "category": {
+            "S": "餐厅燃气安全"
+          },
+          "description": {
+            "S": "通过O/X问答确认餐厅、饭店必须了解的燃气安全守则。"
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "给客人桌上煮火锅时，使用比便携式燃气炉大得多的烤盘或锅也没关系？"
+                  },
+                  "answerLabel": {
+                    "S": "X（危险）"
+                  },
+                  "explanation": {
+                    "S": "如果使用比便携式燃气炉锅架更宽的炊具，炊具产生的高温辐射热会直接传到内置的丁烷气罐。这会使气罐内部压力升高，爆炸危险非常大，因此必须使用尺寸合适的炊具。\n💡 \"烤盘要小，安全要大！绝对不要使用盖住燃气炉的过大烤盘！\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "营业结束时很忙，只要把燃气灶的点火旋钮关好就可以下班，很安全？"
+                  },
+                  "answerLabel": {
+                    "S": "X（不够）"
+                  },
+                  "explanation": {
+                    "S": "关闭点火旋钮只是第一步。为了彻底防止燃气泄漏、确保安全，还必须关闭燃气管道上的黄色“中间阀门”。这是预防打烊后空无一人的店内发生意外的最可靠方法。\n💡 \"下班前的最后任务！关闭点火旋钮，关紧中间阀门！\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "厨房里有不明原因的浓重燃气怪味时，应立即打开排风扇把燃气排出去？"
+                  },
+                  "answerLabel": {
+                    "S": "X（绝对不可以）"
+                  },
+                  "explanation": {
+                    "S": "燃气泄漏时打开排风扇或操作电灯开关，设备内部产生的微小电火花可能直接成为燃气爆炸的点火源。绝对不要操作电器，应把门窗大大敞开，用扫帚或扇子等像扫地一样把燃气自然地赶出去通风。\n💡 \"闻到燃气味时绝对不要碰电源开关！只要把窗户大大打开！\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "在厨房用大锅长时间熬汤时，为了空调效率把窗户全部关上，只开抽油烟机就足够了？"
+                  },
+                  "answerLabel": {
+                    "S": "X（危险）"
+                  },
+                  "explanation": {
+                    "S": "燃气要安全燃烧需要充足的氧气。如果紧闭窗户只开抽油烟机，厨房内的氧气会迅速不足，导致不完全燃烧。这一过程中会产生无色无味、致命的一氧化碳（CO），因此烹饪时必须打开窗户或进气口，让新鲜空气持续进入。\n💡 \"开油烟机时窗户也要开！新鲜空气进来才能防止一氧化碳！\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "餐厅常用的丁烷气罐，为了方便更换，最好堆放在燃气灶旁边或火源附近？"
+                  },
+                  "answerLabel": {
+                    "S": "X（非常危险）"
+                  },
+                  "explanation": {
+                    "S": "如果把丁烷气罐存放在燃气灶、烤箱、暖炉等火源附近，周围的高温会使罐内燃气膨胀。气罐承受不住压力时可能引发重大爆炸事故。丁烷气罐必须存放在远离火源、通风良好、没有阳光直射的阴凉处。\n💡 \"丁烷气罐怕热！请远离火源，存放在阴凉处！\""
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "ja": {
+        "M": {
+          "title": {
+            "S": "飲食店のガス安全クイズ"
+          },
+          "category": {
+            "S": "飲食店のガス安全"
+          },
+          "description": {
+            "S": "食堂・飲食店で必ず知っておくべきガス安全ルールをO/Xクイズで確認しましょう。"
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "お客様のテーブルに出す鍋料理を煮るとき、カセットコンロよりずっと大きい鉄板や鍋を使っても大丈夫？"
+                  },
+                  "answerLabel": {
+                    "S": "X（危険です）"
+                  },
+                  "explanation": {
+                    "S": "カセットコンロの五徳より広い調理器具を使うと、調理器具から出る熱い輻射熱が内蔵のカセットボンベにそのまま伝わります。そのためボンベ内部の圧力が上がり、爆発の危険が非常に高くなるので、必ず適切な大きさの調理器具を使ってください。\n💡 「鉄板は小さく、安全は大きく！コンロを覆う大きすぎる鉄板は絶対ダメ！」"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "忙しい閉店時間、ガスコンロの点火つまみさえしっかり消して帰れば安全？"
+                  },
+                  "answerLabel": {
+                    "S": "X（不十分です）"
+                  },
+                  "explanation": {
+                    "S": "点火つまみを消すのは一次的な遮断にすぎません。ガス漏れを完全に防ぎ安全を確保するには、ガス配管につながっている黄色い「中間バルブ」まで必ず閉めてください。閉店後の無人の店で起こりうる万一の事故を防ぐ最も確実な方法です。\n💡 「帰る前の最後の任務！点火つまみを消して、中間バルブを閉めて！」"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "厨房で原因不明のかび臭いガスのにおいが強くするときは、すぐに換気扇をつけてガスを外に出すべき？"
+                  },
+                  "answerLabel": {
+                    "S": "X（絶対にいけません）"
+                  },
+                  "explanation": {
+                    "S": "ガスが漏れているときに換気扇をつけたり照明のスイッチを操作したりすると、機器内部で発生するわずかな電気火花がガス爆発の直接の着火源になることがあります。電気機器は絶対に操作せず、窓や出入口を大きく開け、ほうきやうちわなどでガスを外へ掃き出すように自然換気してください。\n💡 「ガスのにおいがしたら電気スイッチは絶対禁止！窓だけを大きく開けてください！」"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "厨房の大鍋で長時間だしを煮るとき、冷暖房効率のために窓をすべて閉め、換気フード（排気ファン）だけつけておけば十分？"
+                  },
+                  "answerLabel": {
+                    "S": "X（危険です）"
+                  },
+                  "explanation": {
+                    "S": "ガスが安全に燃えるには十分な酸素が必要です。窓を閉め切ったまま換気フードだけを動かすと、厨房内の酸素が急激に不足して不完全燃焼が起こります。その過程で無色・無臭の致命的な一酸化炭素（CO）が発生するため、調理中は必ず窓や給気口を開けて新鮮な空気が入り続けるようにしてください。\n💡 「フードをつけるときは窓もセットで！新鮮な空気が入ってこそ一酸化炭素を防げます！」"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "食堂でよく使うカセットボンベは、交換しやすいようにガスコンロのすぐ横や火気の近くに積んで保管するのがよい？"
+                  },
+                  "answerLabel": {
+                    "S": "X（非常に危険です）"
+                  },
+                  "explanation": {
+                    "S": "ガスコンロ、オーブン、ストーブなど火気の周りにカセットボンベを保管すると、周囲の熱でボンベ内部のガスが膨張します。ボンベが圧力に耐えられなくなると、大きな爆発事故につながるおそれがあります。カセットボンベは必ず火気から離れた、風通しがよく直射日光の当たらない涼しい場所に保管してください。\n💡 「カセットボンベは熱が苦手！火のそばは避けて、涼しい場所に保管してください！」"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "vi": {
+        "M": {
+          "title": {
+            "S": "Đố vui an toàn gas tại nhà hàng"
+          },
+          "category": {
+            "S": "An toàn gas tại nhà hàng"
+          },
+          "description": {
+            "S": "Kiểm tra các quy tắc an toàn gas bắt buộc phải biết tại nhà hàng, quán ăn qua câu đố O/X."
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "Khi nấu lẩu phục vụ tại bàn khách, dùng vỉ nướng hoặc nồi lớn hơn nhiều so với bếp gas mini cũng không sao?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Nguy hiểm)"
+                  },
+                  "explanation": {
+                    "S": "Nếu dùng dụng cụ nấu rộng hơn kiềng của bếp gas mini, nhiệt bức xạ nóng từ dụng cụ nấu sẽ truyền thẳng xuống bình gas butan gắn bên trong. Điều này làm áp suất trong bình tăng lên và nguy cơ nổ rất cao, vì vậy nhất định phải dùng dụng cụ nấu có kích thước phù hợp.\n💡 \"Vỉ nướng nhỏ, an toàn lớn! Tuyệt đối không dùng vỉ quá khổ che kín bếp gas!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "Giờ đóng cửa bận rộn, chỉ cần tắt núm đánh lửa của bếp gas thật chắc rồi về là an toàn?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Chưa đủ)"
+                  },
+                  "explanation": {
+                    "S": "Tắt núm đánh lửa chỉ là bước ngắt ban đầu. Để ngăn rò rỉ gas hoàn toàn và đảm bảo an toàn, nhất định phải khóa cả 'van giữa' màu vàng nối với đường ống gas. Đây là cách chắc chắn nhất để phòng ngừa sự cố có thể xảy ra trong quán trống sau giờ đóng cửa.\n💡 \"Nhiệm vụ cuối cùng trước khi về! Tắt núm đánh lửa, khóa van giữa!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "Khi trong bếp có mùi gas hôi nồng nặc không rõ nguyên nhân, phải bật ngay quạt thông gió để đẩy gas ra ngoài?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Tuyệt đối không)"
+                  },
+                  "explanation": {
+                    "S": "Khi gas bị rò rỉ mà bật quạt thông gió hoặc bật công tắc đèn, tia lửa điện nhỏ phát sinh bên trong thiết bị có thể trở thành nguồn gây nổ gas trực tiếp. Tuyệt đối không thao tác thiết bị điện; hãy mở toang cửa sổ và cửa ra vào, dùng chổi hoặc quạt tay quét gas ra ngoài để thông gió tự nhiên.\n💡 \"Khi ngửi thấy mùi gas, tuyệt đối không chạm công tắc điện! Chỉ mở toang cửa sổ thôi!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "Khi ninh nước dùng trong nồi lớn nhiều giờ trong bếp, để tiết kiệm điều hòa có thể đóng hết cửa sổ và chỉ bật máy hút mùi là đủ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Nguy hiểm)"
+                  },
+                  "explanation": {
+                    "S": "Gas cần đủ oxy để cháy an toàn. Nếu đóng kín cửa sổ và chỉ chạy máy hút mùi, oxy trong bếp sẽ nhanh chóng thiếu hụt và xảy ra cháy không hoàn toàn. Quá trình này sinh ra khí CO chết người, không màu không mùi, vì vậy khi nấu phải luôn mở cửa sổ hoặc cửa cấp khí để không khí trong lành liên tục đi vào.\n💡 \"Bật máy hút mùi thì mở cả cửa sổ! Có không khí trong lành mới ngăn được khí CO!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "Bình gas butan dùng thường xuyên ở quán ăn nên xếp ngay cạnh bếp gas hoặc gần lửa để tiện thay?"
+                  },
+                  "answerLabel": {
+                    "S": "X (Rất nguy hiểm)"
+                  },
+                  "explanation": {
+                    "S": "Nếu cất bình gas butan gần nguồn nhiệt như bếp gas, lò nướng, lò sưởi, hơi nóng xung quanh sẽ làm gas trong bình giãn nở. Khi bình không chịu nổi áp suất, có thể dẫn đến tai nạn nổ lớn. Bình gas butan phải được cất ở nơi thoáng mát, xa lửa, thông gió tốt và không bị ánh nắng chiếu trực tiếp.\n💡 \"Bình gas butan rất sợ nóng! Tránh xa lửa và cất ở nơi thoáng mát nhé!\""
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "lo": {
+        "M": {
+          "title": {
+            "S": "ຄຳຖາມຄວາມປອດໄພແກັສໃນຮ້ານອາຫານ"
+          },
+          "category": {
+            "S": "ຄວາມປອດໄພແກັສໃນຮ້ານອາຫານ"
+          },
+          "description": {
+            "S": "ກວດສອບກົດລະບຽບຄວາມປອດໄພແກັສທີ່ຮ້ານອາຫານຕ້ອງຮູ້ດ້ວຍຄຳຖາມ O/X."
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "ເວລາຕົ້ມໝໍ້ໄຟໃຫ້ລູກຄ້າທີ່ໂຕະ, ໃຊ້ແຜ່ນປີ້ງ ຫຼື ໝໍ້ທີ່ໃຫຍ່ກວ່າເຕົາແກັສພົກພາຫຼາຍກໍບໍ່ເປັນຫຍັງບໍ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (ອັນຕະລາຍ)"
+                  },
+                  "explanation": {
+                    "S": "ຖ້າໃຊ້ເຄື່ອງຄົວທີ່ກວ້າງກວ່າຂາຕັ້ງໝໍ້ຂອງເຕົາແກັສພົກພາ ຄວາມຮ້ອນທີ່ແຜ່ອອກຈາກເຄື່ອງຄົວຈະສົ່ງຜ່ານລົງໄປຫາກະປ໋ອງແກັສບິວເທນທີ່ຢູ່ພາຍໃນໂດຍກົງ. ສິ່ງນີ້ເຮັດໃຫ້ຄວາມດັນພາຍໃນກະປ໋ອງສູງຂຶ້ນ ແລະ ມີຄວາມສ່ຽງລະເບີດສູງຫຼາຍ ດັ່ງນັ້ນຕ້ອງໃຊ້ເຄື່ອງຄົວທີ່ມີຂະໜາດເໝາະສົມ.\n💡 \"ແຜ່ນປີ້ງນ້ອຍ, ຄວາມປອດໄພໃຫຍ່! ຫ້າມໃຊ້ແຜ່ນປີ້ງໃຫຍ່ເກີນທີ່ປົກເຕົາແກັສເດັດຂາດ!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "ເວລາປິດຮ້ານທີ່ຫຍຸ້ງ, ພຽງແຕ່ປິດປຸ່ມຈູດໄຟຂອງເຕົາແກັສໃຫ້ແນ່ນອນ ແລ້ວກັບບ້ານກໍປອດໄພແລ້ວບໍ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (ບໍ່ພຽງພໍ)"
+                  },
+                  "explanation": {
+                    "S": "ການປິດປຸ່ມຈູດໄຟເປັນພຽງການຕັດຂັ້ນຕົ້ນເທົ່ານັ້ນ. ເພື່ອປ້ອງກັນແກັສຮົ່ວຢ່າງສົມບູນ ແລະ ຮັບປະກັນຄວາມປອດໄພ ຕ້ອງປິດ 'ວາວກາງ' ສີເຫຼືອງທີ່ຕໍ່ກັບທໍ່ແກັສນຳອີກ. ນີ້ແມ່ນວິທີທີ່ແນ່ນອນທີ່ສຸດເພື່ອປ້ອງກັນອຸປະຕິເຫດທີ່ອາດເກີດຂຶ້ນໃນຮ້ານທີ່ບໍ່ມີຄົນຫຼັງປິດຮ້ານ.\n💡 \"ໜ້າທີ່ສຸດທ້າຍກ່ອນກັບບ້ານ! ປິດປຸ່ມຈູດໄຟ ແລະ ປິດວາວກາງ!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "ເມື່ອມີກິ່ນແກັສເໝັນແຮງໃນຫ້ອງຄົວໂດຍບໍ່ຮູ້ສາເຫດ, ຄວນເປີດພັດລົມດູດອາກາດທັນທີເພື່ອໄລ່ແກັສອອກໄປບໍ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (ບໍ່ໄດ້ເດັດຂາດ)"
+                  },
+                  "explanation": {
+                    "S": "ຖ້າເປີດພັດລົມດູດອາກາດ ຫຼື ກົດສະວິດໄຟໃນຂະນະທີ່ແກັສຮົ່ວ ປະກາຍໄຟຟ້ານ້ອຍໆທີ່ເກີດຂຶ້ນພາຍໃນອຸປະກອນ ອາດກາຍເປັນແຫຼ່ງຈູດລະເບີດແກັສໂດຍກົງ. ຢ່າແຕະອຸປະກອນໄຟຟ້າເດັດຂາດ, ໃຫ້ເປີດປ່ອງຢ້ຽມ ແລະ ປະຕູໃຫ້ກວ້າງ ແລ້ວໃຊ້ໄມ້ກວາດ ຫຼື ພັດ ກວາດແກັສອອກໄປແບບທຳມະຊາດ.\n💡 \"ເມື່ອໄດ້ກິ່ນແກັສ ຫ້າມແຕະສະວິດໄຟຟ້າເດັດຂາດ! ໃຫ້ເປີດປ່ອງຢ້ຽມໃຫ້ກວ້າງເທົ່ານັ້ນ!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "ເວລາຕົ້ມນ້ຳແກງໃນໝໍ້ໃຫຍ່ເປັນເວລາດົນໃນຫ້ອງຄົວ, ປິດປ່ອງຢ້ຽມທັງໝົດເພື່ອປະຫຍັດແອ ແລ້ວເປີດພຽງແຕ່ເຄື່ອງດູດຄວັນກໍພຽງພໍແລ້ວບໍ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (ອັນຕະລາຍ)"
+                  },
+                  "explanation": {
+                    "S": "ແກັສຕ້ອງການອົກຊີເຈນພຽງພໍຈຶ່ງຈະເຜົາໄໝ້ຢ່າງປອດໄພ. ຖ້າປິດປ່ອງຢ້ຽມແໜ້ນ ແລ້ວເປີດພຽງແຕ່ເຄື່ອງດູດຄວັນ ອົກຊີເຈນໃນຫ້ອງຄົວຈະຂາດແຄນຢ່າງໄວ ແລະ ເກີດການເຜົາໄໝ້ບໍ່ສົມບູນ. ຂະບວນການນີ້ເຮັດໃຫ້ເກີດອາຍແກັສຄາບອນມໍໂນໄຊ (CO) ທີ່ບໍ່ມີສີ ບໍ່ມີກິ່ນ ແລະ ເປັນອັນຕະລາຍເຖິງຊີວິດ ດັ່ງນັ້ນເວລາແຕ່ງອາຫານຕ້ອງເປີດປ່ອງຢ້ຽມ ຫຼື ຊ່ອງລົມເຂົ້າ ເພື່ອໃຫ້ອາກາດບໍລິສຸດເຂົ້າມາຕະຫຼອດ.\n💡 \"ເປີດເຄື່ອງດູດຄວັນ ຕ້ອງເປີດປ່ອງຢ້ຽມນຳ! ອາກາດບໍລິສຸດເຂົ້າມາຈຶ່ງປ້ອງກັນຄາບອນມໍໂນໄຊໄດ້!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "ກະປ໋ອງແກັສບິວເທນທີ່ຮ້ານອາຫານໃຊ້ເລື້ອຍໆ ຄວນວາງກອງໄວ້ຂ້າງເຕົາແກັສ ຫຼື ໃກ້ໄຟ ເພື່ອໃຫ້ປ່ຽນໄດ້ງ່າຍບໍ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (ອັນຕະລາຍຫຼາຍ)"
+                  },
+                  "explanation": {
+                    "S": "ຖ້າເກັບກະປ໋ອງແກັສບິວເທນໄວ້ໃກ້ແຫຼ່ງຄວາມຮ້ອນ ເຊັ່ນ ເຕົາແກັສ, ເຕົາອົບ ຫຼື ເຕົາຜິງ ຄວາມຮ້ອນອ້ອມຂ້າງຈະເຮັດໃຫ້ແກັສພາຍໃນກະປ໋ອງຂະຫຍາຍຕົວ. ຖ້າກະປ໋ອງທົນຄວາມດັນບໍ່ໄຫວ ອາດເກີດອຸປະຕິເຫດລະເບີດຮ້າຍແຮງໄດ້. ຕ້ອງເກັບກະປ໋ອງແກັສບິວເທນໄວ້ໃນບ່ອນທີ່ເຢັນ, ຫ່າງຈາກໄຟ, ລົມຖ່າຍເທສະດວກ ແລະ ບໍ່ຖືກແສງແດດໂດຍກົງ.\n💡 \"ກະປ໋ອງແກັສບິວເທນບໍ່ມັກຄວາມຮ້ອນ! ໃຫ້ຫ່າງຈາກໄຟ ແລະ ເກັບໄວ້ໃນບ່ອນເຢັນ!\""
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "ne": {
+        "M": {
+          "title": {
+            "S": "रेस्टुरेन्टको ग्यास सुरक्षा क्विज"
+          },
+          "category": {
+            "S": "रेस्टुरेन्टको ग्यास सुरक्षा"
+          },
+          "description": {
+            "S": "रेस्टुरेन्ट र भोजनालयमा अनिवार्य रूपमा जान्नुपर्ने ग्यास सुरक्षा नियमहरू O/X क्विजमार्फत जाँच्नुहोस्।"
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "ग्राहकको टेबलमा हट पट पकाउँदा पोर्टेबल ग्यास चुलोभन्दा धेरै ठूलो ग्रिल प्लेट वा भाँडो प्रयोग गर्दा पनि ठीक छ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (खतरनाक छ)"
+                  },
+                  "explanation": {
+                    "S": "पोर्टेबल ग्यास चुलोको भाँडो राख्ने स्ट्यान्डभन्दा चौडा भाँडो प्रयोग गर्दा भाँडोबाट निस्कने तातो विकिरण ताप भित्र जडान गरिएको ब्युटेन क्यानसम्म सिधै पुग्छ। यसले क्यानभित्रको चाप बढाउँछ र विस्फोटको जोखिम अत्यन्त उच्च हुन्छ, त्यसैले अनिवार्य रूपमा उपयुक्त आकारको भाँडो प्रयोग गर्नुहोस्।\n💡 \"प्लेट सानो, सुरक्षा ठूलो! ग्यास चुलो छोप्ने अति ठूलो प्लेट कहिल्यै प्रयोग नगर्नुहोस्!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "व्यस्त पसल बन्द गर्ने समयमा ग्यास चुलोको इग्निसन नब मात्र राम्ररी बन्द गरेर घर गए सुरक्षित हुन्छ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (पर्याप्त छैन)"
+                  },
+                  "explanation": {
+                    "S": "इग्निसन नब बन्द गर्नु पहिलो चरणको रोकथाम मात्र हो। ग्यास चुहावट पूर्ण रूपमा रोक्न र सुरक्षाका लागि ग्यास पाइपमा जडान गरिएको पहेँलो 'बीचको भल्भ' पनि अनिवार्य रूपमा बन्द गर्नुपर्छ। पसल बन्द भएपछि खाली पसलमा हुन सक्ने दुर्घटना रोक्ने यो सबैभन्दा भरपर्दो उपाय हो।\n💡 \"घर जानुअघिको अन्तिम काम! इग्निसन नब बन्द, बीचको भल्भ बन्द!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "भान्सामा कारण थाहा नभएको कडा ग्यासको गन्ध आएमा तुरुन्तै भेन्टिलेसन फ्यान चलाएर ग्यास बाहिर निकाल्नुपर्छ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (कदापि हुँदैन)"
+                  },
+                  "explanation": {
+                    "S": "ग्यास चुहिएको बेला भेन्टिलेसन फ्यान चलाउँदा वा बत्तीको स्विच थिच्दा उपकरणभित्र निस्कने सानो बिजुलीको झिल्का ग्यास विस्फोटको सिधा कारण बन्न सक्छ। बिजुलीका उपकरण कदापि नचलाउनुहोस्; झ्याल र ढोका पूरै खोल्नुहोस् र कुचो वा हातपंखा प्रयोग गरेर ग्यासलाई बढार्दै बाहिर निकाल्ने गरी प्राकृतिक रूपमा हावा चलाउनुहोस्।\n💡 \"ग्यासको गन्ध आएमा बिजुलीको स्विच कदापि नछुनुहोस्! झ्याल मात्र पूरै खोल्नुहोस्!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "भान्सामा ठूलो भाँडोमा लामो समयसम्म सुप उमाल्दा, एसी/हिटरको दक्षताका लागि सबै झ्याल बन्द गरेर किचन हुड (धुवाँ तान्ने पंखा) मात्र चलाए पुग्छ?"
+                  },
+                  "answerLabel": {
+                    "S": "X (खतरनाक छ)"
+                  },
+                  "explanation": {
+                    "S": "ग्यास सुरक्षित रूपमा बल्न पर्याप्त अक्सिजन चाहिन्छ। झ्याल कसेर बन्द गरी किचन हुड मात्र चलाउँदा भान्साभित्रको अक्सिजन छिट्टै कम हुन्छ र अपूर्ण दहन हुन्छ। यस क्रममा रङहीन, गन्धहीन र प्राणघातक कार्बन मोनोअक्साइड (CO) उत्पन्न हुन्छ, त्यसैले खाना पकाउँदा अनिवार्य रूपमा झ्याल वा हावा पस्ने प्वाल खोलेर ताजा हावा निरन्तर भित्र आउने बनाउनुहोस्।\n💡 \"हुड चलाउँदा झ्याल पनि खोल्नुहोस्! ताजा हावा आएमा मात्र कार्बन मोनोअक्साइड रोक्न सकिन्छ!\""
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "रेस्टुरेन्टमा धेरै प्रयोग हुने ब्युटेन क्यानहरू फेर्न सजिलो होस् भनेर ग्यास चुलोको छेउमा वा आगो नजिकै थुपारेर राख्नु राम्रो हो?"
+                  },
+                  "answerLabel": {
+                    "S": "X (अत्यन्त खतरनाक छ)"
+                  },
+                  "explanation": {
+                    "S": "ग्यास चुलो, ओभन, हिटर जस्ता आगोका स्रोत नजिक ब्युटेन क्यान राख्दा वरपरको तापले क्यानभित्रको ग्यास फैलिन्छ। क्यानले चाप थेग्न नसकेमा ठूलो विस्फोट दुर्घटना हुन सक्छ। ब्युटेन क्यान अनिवार्य रूपमा आगोबाट टाढा, राम्रो हावा चल्ने र सिधा घाम नपर्ने शीतल ठाउँमा राख्नुहोस्।\n💡 \"ब्युटेन क्यानलाई ताप मन पर्दैन! आगोबाट टाढा राखेर शीतल ठाउँमा भण्डारण गर्नुहोस्!\""
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -5,6 +5,7 @@ import Script from "next/script";
 import { useForm } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCreateParticipant } from "@/lib/api/participants";
+import { useLanguage } from "@/app/i18n/LanguageProvider";
 
 /* ── Daum 우편번호 타입 선언 ──────────────────────────── */
 interface DaumPostcodeData {
@@ -45,24 +46,14 @@ const inputStyle = {
   background: "rgba(255,255,255,0.06)",
   border: "1px solid rgba(255,255,255,0.12)",
 };
-const PRIVACY_TEXT = `■ 개인정보 수집·이용 동의 (필수)
 
-수집 항목  : 이름, 전화번호, 주소
-수집 목적  : 퀴즈 이벤트 당첨자 선정 및 경품 발송
-보유 기간  : 이벤트 종료 후 3개월 후 파기
-위탁 내용  : 경품 배송사에 배송 목적으로 이름·주소 제공
-
-🔒 수집된 개인정보는 오직 경품 수령 목적으로만 사용되며,
-   그 외의 어떠한 목적(마케팅, 홍보, 제3자 제공 등)으로도
-   일절 활용되지 않습니다.
-
-※ 위 동의를 거부할 권리가 있으나, 거부 시 이벤트 참여가 불가능합니다.`;
 
 export default function ParticipantForm({
   quizName,
   score,
   totalQuestions,
 }: Props) {
+  const { t } = useLanguage();
   const [privacyOpen, setPrivacyOpen] = useState(false);
   const [registered, setRegistered] = useState<string | null>(null);
   const detailInputRef = useRef<HTMLInputElement | null>(null);
@@ -90,10 +81,10 @@ export default function ParticipantForm({
 
   // phone: formatPhone 먼저 실행 후 RHF onChange 호출 → 포맷된 값이 유효성 검사에 반영됨
   const { onChange: phoneRhfOnChange, ...phoneReg } = register("phone", {
-    required: "전화번호를 입력해주세요.",
+    required: t("form.phoneRequired"),
     pattern: {
       value: /^01[0-9]-\d{3,4}-\d{4}$/,
-      message: "형식을 확인해주세요. (예: 010-1234-5678)",
+      message: t("form.phonePattern"),
     },
   });
 
@@ -158,19 +149,19 @@ export default function ParticipantForm({
         >
           🎉
         </motion.div>
-        <h3 className="text-xl font-black text-white mb-2">응모 등록 완료!</h3>
+        <h3 className="text-xl font-black text-white mb-2">{t("form.doneTitle")}</h3>
         <p className="text-sm text-blue-200 mb-5">
-          당첨 시 입력하신 연락처로 개별 안내 드립니다.
+          {t("form.doneDesc")}
         </p>
         <div
           className="rounded-2xl px-4 py-4"
           style={{ background: "rgba(0,0,0,0.3)" }}
         >
-          <p className="text-xs text-blue-400 mb-1">참가 코드</p>
+          <p className="text-xs text-blue-400 mb-1">{t("form.code")}</p>
           <p className="font-mono text-xl font-black text-orange-400 tracking-widest">
             {registered}
           </p>
-          <p className="text-xs text-blue-400 mt-2">이 코드를 메모해 두세요.</p>
+          <p className="text-xs text-blue-400 mt-2">{t("form.codeHint")}</p>
         </div>
       </motion.div>
     );
@@ -200,9 +191,9 @@ export default function ParticipantForm({
         <div className="flex items-center gap-3 mb-6">
           <span className="text-2xl" aria-hidden="true">🎁</span>
           <div>
-            <h3 className="text-lg font-black text-white">경품 응모 등록</h3>
+            <h3 className="text-lg font-black text-white">{t("form.title")}</h3>
             <p className="text-xs text-blue-300">
-              당첨 시 입력하신 주소로 경품을 발송해 드립니다.
+              {t("form.subtitle")}
             </p>
           </div>
         </div>
@@ -218,15 +209,15 @@ export default function ParticipantForm({
               htmlFor="participant-name"
               className="block text-sm font-semibold text-blue-200 mb-1.5"
             >
-              이름 <span className="text-orange-400">*</span>
+              {t("form.name")} <span className="text-orange-400">*</span>
             </label>
             <input
               id="participant-name"
               {...register("name", {
-                required: "이름을 입력해주세요.",
-                minLength: { value: 2, message: "2글자 이상 입력해주세요." },
+                required: t("form.nameRequired"),
+                minLength: { value: 2, message: t("form.nameMin") },
               })}
-              placeholder="홍길동"
+              placeholder={t("form.namePlaceholder")}
               className={inputCls}
               style={inputStyle}
               aria-describedby={errors.name ? "name-error" : undefined}
@@ -244,7 +235,7 @@ export default function ParticipantForm({
               htmlFor="participant-phone"
               className="block text-sm font-semibold text-blue-200 mb-1.5"
             >
-              전화번호 <span className="text-orange-400">*</span>
+              {t("form.phone")} <span className="text-orange-400">*</span>
             </label>
             <input
               id="participant-phone"
@@ -270,13 +261,13 @@ export default function ParticipantForm({
           {/* ── 주소 ─────────────────────────────────── */}
           <div>
             <label className="block text-sm font-semibold text-blue-200 mb-1.5">
-              주소 <span className="text-orange-400">*</span>
+              {t("form.address")} <span className="text-orange-400">*</span>
             </label>
 
             {/* hidden field for validation */}
             <input
               type="hidden"
-              {...register("address", { required: "주소를 검색해주세요." })}
+              {...register("address", { required: t("form.addressRequired") })}
             />
 
             {/* 도로명 주소 + 검색 버튼 */}
@@ -284,10 +275,10 @@ export default function ParticipantForm({
               <input
                 value={addressValue}
                 readOnly
-                placeholder="주소 검색 버튼을 클릭하세요"
+                placeholder={t("form.addressPlaceholder")}
                 className={`${inputCls} flex-1 cursor-default`}
                 style={inputStyle}
-                aria-label="도로명 주소"
+                aria-label={t("form.addressAria")}
                 aria-describedby={errors.address ? "address-error" : undefined}
               />
               <motion.button
@@ -301,7 +292,7 @@ export default function ParticipantForm({
                   boxShadow: "0 0 12px rgba(59,130,246,0.3)",
                 }}
               >
-                주소 검색
+                {t("form.addressSearch")}
               </motion.button>
             </div>
 
@@ -312,10 +303,10 @@ export default function ParticipantForm({
                 detailRHFRef(el);
                 detailInputRef.current = el;
               }}
-              placeholder="상세 주소 (동, 호수 등)"
+              placeholder={t("form.addressDetailPlaceholder")}
               className={inputCls}
               style={inputStyle}
-              aria-label="상세 주소"
+              aria-label={t("form.addressDetailAria")}
             />
             {errors.address && (
               <p id="address-error" role="alert" className="mt-1 text-xs text-red-400">
@@ -339,7 +330,7 @@ export default function ParticipantForm({
               className="flex items-center justify-between w-full text-sm font-semibold text-blue-200 hover:text-white transition-colors"
               aria-expanded={privacyOpen ? "true" : "false"}
             >
-              <span>개인정보 수집·이용 동의 내용 보기</span>
+              <span>{t("form.privacyToggle")}</span>
               <motion.span
                 animate={{ rotate: privacyOpen ? 180 : 0 }}
                 transition={{ duration: 0.2 }}
@@ -360,7 +351,7 @@ export default function ParticipantForm({
                   className="overflow-hidden whitespace-pre-wrap text-xs text-blue-300 leading-relaxed mt-3 pt-3"
                   style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}
                 >
-                  {PRIVACY_TEXT}
+                  {t("form.privacyText")}
                 </motion.pre>
               )}
             </AnimatePresence>
@@ -371,7 +362,7 @@ export default function ParticipantForm({
                 <input
                   type="checkbox"
                   {...register("privacyConsent", {
-                    required: "개인정보 수집·이용에 동의해주세요.",
+                    required: t("form.privacyRequired"),
                   })}
                   className="sr-only peer"
                 />
@@ -408,8 +399,8 @@ export default function ParticipantForm({
                 </div>
               </div>
               <span className="text-sm text-blue-200 group-hover:text-white transition-colors leading-snug">
-                개인정보 수집·이용에 동의합니다.{" "}
-                <span className="text-orange-400 font-semibold">(필수)</span>
+                {t("form.privacyAgree")}{" "}
+                <span className="text-orange-400 font-semibold">{t("form.required")}</span>
               </span>
             </label>
 
@@ -440,10 +431,10 @@ export default function ParticipantForm({
                   className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full"
                   aria-hidden="true"
                 />
-                등록 중…
+                {t("form.submitting")}
               </span>
             ) : (
-              "응모 등록하기 🎁"
+              t("form.submit")
             )}
           </motion.button>
         </form>

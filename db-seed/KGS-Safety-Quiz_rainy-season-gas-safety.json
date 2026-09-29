@@ -58,5 +58,591 @@
         }
       }
     ]
+  },
+  "translations": {
+    "M": {
+      "en": {
+        "M": {
+          "title": {
+            "S": "Rainy Season Gas Safety Quiz"
+          },
+          "category": {
+            "S": "Rainy Season Gas Safety"
+          },
+          "description": {
+            "S": "Check the gas safety rules you must know for flooding and strong winds in the rainy season with an O/X quiz."
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "After a strong rainy-season wind, the boiler exhaust pipe is wobbling, but the boiler works normally, so it is fine to keep using it."
+                  },
+                  "answerLabel": {
+                    "S": "X (No)"
+                  },
+                  "explanation": {
+                    "S": "If strong wind has loosened or damaged the exhaust pipe, exhaust gas can flow indoors, so it must be inspected before use."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "On a very rainy day, I smelled gas and turned on an electric fan to ventilate quickly."
+                  },
+                  "answerLabel": {
+                    "S": "X (Very dangerous)"
+                  },
+                  "explanation": {
+                    "S": "The tiny electric spark made when switching on the fan can ignite the leaked gas. First close the gas valve, then open the windows for natural ventilation."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "I firmly secured an LPG cylinder at risk of flooding so it cannot fall over."
+                  },
+                  "answerLabel": {
+                    "S": "O (Correct)"
+                  },
+                  "explanation": {
+                    "S": "It is important to secure LPG cylinders safely so they do not fall over or move due to flooding or strong winds."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "After heavy rain, I checked the gas hose and pipes for problems before using gas."
+                  },
+                  "answerLabel": {
+                    "S": "O (Correct)"
+                  },
+                  "explanation": {
+                    "S": "Hoses and pipes can be damaged during the rainy season, so it is safe to inspect them before use."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "I only wiped the outside of a flooded gas boiler clean and used it right away."
+                  },
+                  "answerLabel": {
+                    "S": "X (No)"
+                  },
+                  "explanation": {
+                    "S": "The internal parts of a flooded gas boiler may be damaged, so it must be used only after a safety inspection by a professional."
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "zh": {
+        "M": {
+          "title": {
+            "S": "雨季燃气安全问答"
+          },
+          "category": {
+            "S": "雨季燃气安全"
+          },
+          "description": {
+            "S": "通过O/X问答确认雨季浸水、强风时必须了解的燃气安全守则。"
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "雨季强风过后，锅炉排气管有些晃动，但锅炉运行正常，所以可以继续使用。"
+                  },
+                  "answerLabel": {
+                    "S": "X（不可以）"
+                  },
+                  "explanation": {
+                    "S": "如果强风导致排气管脱落或损坏，废气可能进入室内，因此必须检查后再使用。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "下大雨的日子闻到燃气味，为了尽快通风打开了电风扇。"
+                  },
+                  "answerLabel": {
+                    "S": "X（非常危险）"
+                  },
+                  "explanation": {
+                    "S": "打开电风扇开关时产生的微小电火花可能点燃泄漏的燃气。应先关闭燃气阀门，再打开窗户自然通风。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "把有浸水风险的液化石油气（LPG）钢瓶牢牢固定，防止倾倒。"
+                  },
+                  "answerLabel": {
+                    "S": "O（正确）"
+                  },
+                  "explanation": {
+                    "S": "重要的是将LPG钢瓶安全固定，防止因浸水或强风而倾倒或移动。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "大雨过后，确认燃气软管和管道没有异常后才使用燃气。"
+                  },
+                  "answerLabel": {
+                    "S": "O（正确）"
+                  },
+                  "explanation": {
+                    "S": "雨季软管和管道可能受损，因此使用前进行检查才安全。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "被水淹过的燃气锅炉，只把外面擦干净就马上使用了。"
+                  },
+                  "answerLabel": {
+                    "S": "X（不可以）"
+                  },
+                  "explanation": {
+                    "S": "被水淹过的燃气锅炉内部零件可能已经损坏，必须经过专业人员的安全检查后才能使用。"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "ja": {
+        "M": {
+          "title": {
+            "S": "梅雨時のガス安全クイズ"
+          },
+          "category": {
+            "S": "梅雨時のガス安全"
+          },
+          "description": {
+            "S": "梅雨時の浸水・強風の際に必ず知っておくべきガス安全ルールをO/Xクイズで確認しましょう。"
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "梅雨の強風が過ぎた後、ボイラーの排気筒がぐらついているが、ボイラーは正常に動いているのでそのまま使ってもよい。"
+                  },
+                  "answerLabel": {
+                    "S": "X（いけません）"
+                  },
+                  "explanation": {
+                    "S": "強風で排気筒が外れたり損傷したりすると、排気ガスが室内に流れ込むおそれがあるため、必ず点検してから使用してください。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "大雨の日にガスのにおいがしたので、早く換気しようと扇風機をつけた。"
+                  },
+                  "answerLabel": {
+                    "S": "X（非常に危険です）"
+                  },
+                  "explanation": {
+                    "S": "扇風機のスイッチを入れるときに出るわずかな電気火花が、漏れたガスに引火するおそれがあります。まずガスの元栓を閉め、窓を開けて自然換気してください。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "浸水のおそれがあるLPGボンベを、倒れないようにしっかり固定しておいた。"
+                  },
+                  "answerLabel": {
+                    "S": "O（正しいです）"
+                  },
+                  "explanation": {
+                    "S": "LPGボンベは、浸水や強風で倒れたり動いたりしないよう安全に固定しておくことが大切です。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "大雨の後、ガスホースや配管に異常がないか確認してからガスを使った。"
+                  },
+                  "answerLabel": {
+                    "S": "O（正しいです）"
+                  },
+                  "explanation": {
+                    "S": "梅雨時はホースや配管が傷むことがあるため、使用前に点検すると安全です。"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "浸水したガスボイラーを、外側だけきれいに拭いてすぐに使った。"
+                  },
+                  "answerLabel": {
+                    "S": "X（いけません）"
+                  },
+                  "explanation": {
+                    "S": "浸水したガスボイラーは内部部品が損傷している可能性があるため、必ず専門家の安全点検を受けてから使用してください。"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "vi": {
+        "M": {
+          "title": {
+            "S": "Đố vui an toàn gas mùa mưa"
+          },
+          "category": {
+            "S": "An toàn gas mùa mưa"
+          },
+          "description": {
+            "S": "Kiểm tra các quy tắc an toàn gas cần biết khi ngập nước, gió mạnh trong mùa mưa qua câu đố O/X."
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "Sau khi gió mạnh mùa mưa đi qua, ống xả nồi hơi bị lung lay nhưng nồi hơi vẫn chạy bình thường nên cứ tiếp tục sử dụng."
+                  },
+                  "answerLabel": {
+                    "S": "X (Không được)"
+                  },
+                  "explanation": {
+                    "S": "Nếu gió mạnh làm ống xả bị tuột hoặc hư hỏng, khí thải có thể lọt vào trong nhà, vì vậy nhất định phải kiểm tra trước khi sử dụng."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "Vào ngày mưa lớn, ngửi thấy mùi gas nên bật quạt điện để thông gió cho nhanh."
+                  },
+                  "answerLabel": {
+                    "S": "X (Rất nguy hiểm)"
+                  },
+                  "explanation": {
+                    "S": "Tia lửa điện nhỏ phát sinh khi bật công tắc quạt có thể làm gas bị rò rỉ bắt lửa. Trước tiên hãy khóa van gas rồi mở cửa sổ để thông gió tự nhiên."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "Đã cố định chắc chắn bình gas LPG có nguy cơ bị ngập để bình không bị đổ."
+                  },
+                  "answerLabel": {
+                    "S": "O (Đúng)"
+                  },
+                  "explanation": {
+                    "S": "Điều quan trọng là phải cố định bình LPG an toàn để bình không bị đổ hoặc xê dịch do ngập nước hay gió mạnh."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "Sau khi mưa lớn, đã kiểm tra ống dẫn gas và đường ống không có vấn đề rồi mới sử dụng gas."
+                  },
+                  "answerLabel": {
+                    "S": "O (Đúng)"
+                  },
+                  "explanation": {
+                    "S": "Mùa mưa ống dẫn và đường ống có thể bị hư hỏng, nên kiểm tra trước khi sử dụng là an toàn."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "Nồi hơi gas bị ngập nước, chỉ lau sạch bên ngoài rồi dùng ngay."
+                  },
+                  "answerLabel": {
+                    "S": "X (Không được)"
+                  },
+                  "explanation": {
+                    "S": "Nồi hơi gas bị ngập có thể đã hư hỏng linh kiện bên trong, vì vậy nhất định phải được chuyên gia kiểm tra an toàn trước khi sử dụng."
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "lo": {
+        "M": {
+          "title": {
+            "S": "ຄຳຖາມຄວາມປອດໄພແກັສລະດູຝົນ"
+          },
+          "category": {
+            "S": "ຄວາມປອດໄພແກັສລະດູຝົນ"
+          },
+          "description": {
+            "S": "ກວດສອບກົດລະບຽບຄວາມປອດໄພແກັສທີ່ຕ້ອງຮູ້ເມື່ອນ້ຳຖ້ວມ ແລະ ລົມແຮງໃນລະດູຝົນດ້ວຍຄຳຖາມ O/X."
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "ຫຼັງຈາກລົມແຮງໃນລະດູຝົນຜ່ານໄປ ທໍ່ລະບາຍອາຍຂອງບອຍເລີສັ່ນໄປມາ ແຕ່ບອຍເລີຍັງເຮັດວຽກປົກກະຕິ ຈຶ່ງໃຊ້ຕໍ່ໄປໄດ້."
+                  },
+                  "answerLabel": {
+                    "S": "X (ບໍ່ໄດ້)"
+                  },
+                  "explanation": {
+                    "S": "ຖ້າລົມແຮງເຮັດໃຫ້ທໍ່ລະບາຍອາຍຫຼຸດ ຫຼື ເສຍຫາຍ ອາຍເສຍອາດໄຫຼເຂົ້າມາໃນເຮືອນ ດັ່ງນັ້ນຕ້ອງກວດສອບກ່ອນໃຊ້ທຸກຄັ້ງ."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "ມື້ທີ່ຝົນຕົກໜັກ ໄດ້ກິ່ນແກັສ ຈຶ່ງເປີດພັດລົມເພື່ອລະບາຍອາກາດໃຫ້ໄວ."
+                  },
+                  "answerLabel": {
+                    "S": "X (ອັນຕະລາຍຫຼາຍ)"
+                  },
+                  "explanation": {
+                    "S": "ປະກາຍໄຟຟ້ານ້ອຍໆທີ່ເກີດຂຶ້ນຕອນເປີດສະວິດພັດລົມ ອາດເຮັດໃຫ້ແກັສທີ່ຮົ່ວອອກມາລຸກໄໝ້. ໃຫ້ປິດວາວແກັສກ່ອນ ແລ້ວເປີດປ່ອງຢ້ຽມເພື່ອລະບາຍອາກາດແບບທຳມະຊາດ."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "ໄດ້ມັດຖັງແກັສ LPG ທີ່ມີຄວາມສ່ຽງຖືກນ້ຳຖ້ວມໄວ້ໃຫ້ແໜ້ນ ເພື່ອບໍ່ໃຫ້ລົ້ມ."
+                  },
+                  "answerLabel": {
+                    "S": "O (ຖືກຕ້ອງ)"
+                  },
+                  "explanation": {
+                    "S": "ສິ່ງສຳຄັນແມ່ນຕ້ອງຍຶດຖັງ LPG ໃຫ້ປອດໄພ ເພື່ອບໍ່ໃຫ້ລົ້ມ ຫຼື ເຄື່ອນຍ້າຍຍ້ອນນ້ຳຖ້ວມ ຫຼື ລົມແຮງ."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "ຫຼັງຈາກຝົນຕົກໜັກ ໄດ້ກວດເບິ່ງວ່າສາຍແກັສ ແລະ ທໍ່ແກັສບໍ່ມີບັນຫາ ແລ້ວຈຶ່ງໃຊ້ແກັສ."
+                  },
+                  "answerLabel": {
+                    "S": "O (ຖືກຕ້ອງ)"
+                  },
+                  "explanation": {
+                    "S": "ໃນລະດູຝົນ ສາຍ ແລະ ທໍ່ແກັສອາດເສຍຫາຍໄດ້ ດັ່ງນັ້ນການກວດສອບກ່ອນໃຊ້ຈຶ່ງປອດໄພ."
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "ບອຍເລີແກັສທີ່ຖືກນ້ຳຖ້ວມ ເຊັດພຽງແຕ່ດ້ານນອກໃຫ້ສະອາດ ແລ້ວໃຊ້ທັນທີ."
+                  },
+                  "answerLabel": {
+                    "S": "X (ບໍ່ໄດ້)"
+                  },
+                  "explanation": {
+                    "S": "ບອຍເລີແກັສທີ່ຖືກນ້ຳຖ້ວມ ຊິ້ນສ່ວນພາຍໃນອາດເສຍຫາຍແລ້ວ ດັ່ງນັ້ນຕ້ອງໃຫ້ຜູ້ຊ່ຽວຊານກວດສອບຄວາມປອດໄພກ່ອນຈຶ່ງໃຊ້ໄດ້."
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "ne": {
+        "M": {
+          "title": {
+            "S": "वर्षायामको ग्यास सुरक्षा क्विज"
+          },
+          "category": {
+            "S": "वर्षायामको ग्यास सुरक्षा"
+          },
+          "description": {
+            "S": "वर्षायाममा बाढी र तेज हावाको अवस्थामा जान्नुपर्ने ग्यास सुरक्षा नियमहरू O/X क्विजमार्फत जाँच्नुहोस्।"
+          },
+          "questions": {
+            "L": [
+              {
+                "M": {
+                  "id": {
+                    "N": "1"
+                  },
+                  "question": {
+                    "S": "वर्षायामको तेज हावा गएपछि बोइलरको निकास पाइप हल्लिरहेको छ, तर बोइलर सामान्य रूपमा चलिरहेकाले त्यसै प्रयोग गरे हुन्छ।"
+                  },
+                  "answerLabel": {
+                    "S": "X (हुँदैन)"
+                  },
+                  "explanation": {
+                    "S": "तेज हावाले निकास पाइप निस्किएको वा बिग्रिएको भए धुवाँ ग्यास घरभित्र पस्न सक्छ, त्यसैले प्रयोग गर्नुअघि अनिवार्य रूपमा जाँच गर्नुपर्छ।"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "2"
+                  },
+                  "question": {
+                    "S": "धेरै पानी परेको दिन ग्यासको गन्ध आएपछि छिटो हावा चलाउन बिजुलीको पंखा चलाएँ।"
+                  },
+                  "answerLabel": {
+                    "S": "X (अत्यन्त खतरनाक छ)"
+                  },
+                  "explanation": {
+                    "S": "पंखाको स्विच थिच्दा निस्कने सानो बिजुलीको झिल्काले चुहिएको ग्यासमा आगो लगाउन सक्छ। पहिले ग्यास भल्भ बन्द गर्नुहोस् र झ्याल खोलेर प्राकृतिक रूपमा हावा चलाउनुहोस्।"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "3"
+                  },
+                  "question": {
+                    "S": "बाढी पस्न सक्ने ठाउँमा रहेको LPG सिलिन्डर नलडोस् भनेर बलियोसँग बाँधेर राखेँ।"
+                  },
+                  "answerLabel": {
+                    "S": "O (सही हो)"
+                  },
+                  "explanation": {
+                    "S": "LPG सिलिन्डर बाढी वा तेज हावाले नलडोस् वा नसरोस् भनेर सुरक्षित रूपमा बाँधेर राख्नु महत्त्वपूर्ण छ।"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "4"
+                  },
+                  "question": {
+                    "S": "धेरै पानी परेपछि ग्यास पाइप र होजमा कुनै समस्या छैन भनी जाँचेर मात्र ग्यास प्रयोग गरेँ।"
+                  },
+                  "answerLabel": {
+                    "S": "O (सही हो)"
+                  },
+                  "explanation": {
+                    "S": "वर्षायाममा होज र पाइप बिग्रिन सक्छन्, त्यसैले प्रयोग गर्नुअघि जाँच गर्नु सुरक्षित हुन्छ।"
+                  }
+                }
+              },
+              {
+                "M": {
+                  "id": {
+                    "N": "5"
+                  },
+                  "question": {
+                    "S": "बाढीमा डुबेको ग्यास बोइलरलाई बाहिरबाट मात्र सफा गरेर तुरुन्तै प्रयोग गरेँ।"
+                  },
+                  "answerLabel": {
+                    "S": "X (हुँदैन)"
+                  },
+                  "explanation": {
+                    "S": "बाढीमा डुबेको ग्यास बोइलरका भित्री पार्टपुर्जा बिग्रिएका हुन सक्छन्, त्यसैले विशेषज्ञबाट सुरक्षा जाँच गराएपछि मात्र प्रयोग गर्नुपर्छ।"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
   }
 }

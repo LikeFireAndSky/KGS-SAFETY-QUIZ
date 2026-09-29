@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import type { BtnVariant } from "@/lib/utils";
+import { useLanguage } from "@/app/i18n/LanguageProvider";
 
 const STYLE_MAP: Record<BtnVariant, { bg: string; border: string; text: string }> = {
   neutral:          { bg: "rgba(255,255,255,0.05)", border: "rgba(255,255,255,0.15)", text: "#e2e8f0" },
@@ -19,6 +20,7 @@ interface Props {
 }
 
 export default function OXButton({ isO, variant, disabled, onClick }: Props) {
+  const { t } = useLanguage();
   const s = STYLE_MAP[variant];
   const showCheck = variant === "correct" || variant === "correct-reveal";
   const showCross = variant === "wrong";
@@ -44,7 +46,7 @@ export default function OXButton({ isO, variant, disabled, onClick }: Props) {
         x: { duration: 0.5 },
         scale: { type: "spring", stiffness: 300, damping: 20 },
       }}
-      aria-label={isO ? "O (그렇다)" : "X (아니다)"}
+      aria-label={isO ? t("quiz.oAria") : t("quiz.xAria")}
       className="relative flex flex-col items-center justify-center gap-2 py-7 rounded-3xl font-black cursor-pointer"
       style={{
         background: s.bg,

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { getGrade } from "@/lib/utils";
 import type { QuizQuestion } from "@/lib/types";
+import { useLanguage } from "@/app/i18n/LanguageProvider";
 import ParticipantForm from "./ParticipantForm";
 
 interface Props {
@@ -22,6 +23,7 @@ export default function QuizResult({
   quizName,
   onRestart,
 }: Props) {
+  const { t } = useLanguage();
   const total = questions.length;
   const grade = getGrade(score, total);
   const [showForm, setShowForm] = useState(false);
@@ -47,12 +49,12 @@ export default function QuizResult({
         <div
           className="text-6xl font-black mb-2"
           style={{ color: grade.color }}
-          aria-label={`${total}문제 중 ${score}개 정답`}
+          aria-label={t("result.scoreAria", { total, score })}
         >
           {score}{" "}
           <span className="text-3xl text-white/40">/ {total}</span>
         </div>
-        <div className="text-xl font-bold text-white mb-3">{grade.label}</div>
+        <div className="text-xl font-bold text-white mb-3">{t(grade.labelKey)}</div>
 
         <div className="flex gap-1 justify-center" aria-hidden="true">
           {Array.from({ length: total }, (_, i) => (
@@ -76,7 +78,7 @@ export default function QuizResult({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.5, duration: 0.5 }}
         className="w-full space-y-2 mb-8"
-        aria-label="문제별 결과"
+        aria-label={t("result.listAria")}
       >
         {questions.map((q, i) => {
           const correct = picks[i] === q.answer;
@@ -111,7 +113,7 @@ export default function QuizResult({
                   color: q.answer ? "#86efac" : "#fca5a5",
                 }}
               >
-                정답: {q.answer ? "O" : "X"}
+                {t("result.answer", { answer: q.answer ? "O" : "X" })}
               </span>
             </div>
           );
@@ -159,7 +161,7 @@ export default function QuizResult({
                 boxShadow: "0 0 20px rgba(16,185,129,0.3)",
               }}
             >
-              🎁 경품 응모 등록하기
+              {t("result.enterRaffle")}
             </motion.button>
           )}
         </AnimatePresence>
@@ -183,7 +185,7 @@ export default function QuizResult({
             boxShadow: "0 0 20px rgba(249,115,22,0.3)",
           }}
         >
-          다시 도전 🔄
+          {t("result.retry")}
         </motion.button>
         <Link
           href="/"
@@ -193,7 +195,7 @@ export default function QuizResult({
             backdropFilter: "blur(8px)",
           }}
         >
-          홈으로 🏠
+          {t("result.home")}
         </Link>
       </motion.div>
     </div>

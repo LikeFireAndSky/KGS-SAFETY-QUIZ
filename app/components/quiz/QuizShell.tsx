@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useQuiz } from "@/lib/api/quiz";
 import { markCompleted } from "@/lib/quizStorage";
+import { useLanguage } from "@/app/i18n/LanguageProvider";
 import QuizHeader from "./QuizHeader";
 import QuizQuestion from "./QuizQuestion";
 import QuizOXButtons from "./QuizOXButtons";
@@ -17,7 +18,8 @@ interface Props {
 }
 
 export default function QuizShell({ quizName }: Props) {
-  const { data: quiz, isLoading, isError, refetch } = useQuiz(quizName);
+  const { lang, t } = useLanguage();
+  const { data: quiz, isLoading, isError, refetch } = useQuiz(quizName, lang);
 
   const [index, setIndex] = useState(0);
   const [phase, setPhase] = useState<Phase>("question");
@@ -53,9 +55,9 @@ export default function QuizShell({ quizName }: Props) {
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
           className="w-12 h-12 rounded-full border-4 border-orange-500 border-t-transparent"
-          aria-label="로딩 중"
+          aria-label={t("quiz.loadingAria")}
         />
-        <p className="text-blue-300 text-sm">퀴즈를 불러오는 중…</p>
+        <p className="text-blue-300 text-sm">{t("quiz.loading")}</p>
       </div>
     );
   }
@@ -68,8 +70,8 @@ export default function QuizShell({ quizName }: Props) {
         style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%)" }}
       >
         <p className="text-5xl" aria-hidden="true">⚠️</p>
-        <p className="text-white font-bold text-lg">퀴즈를 불러오지 못했습니다.</p>
-        <p className="text-blue-300 text-sm">네트워크 상태를 확인하고 다시 시도해주세요.</p>
+        <p className="text-white font-bold text-lg">{t("quiz.errorTitle")}</p>
+        <p className="text-blue-300 text-sm">{t("quiz.errorHint")}</p>
         <motion.button
           type="button"
           onClick={() => refetch()}
@@ -78,7 +80,7 @@ export default function QuizShell({ quizName }: Props) {
           className="px-8 py-3 rounded-2xl font-bold text-white"
           style={{ background: "linear-gradient(135deg, #f97316, #ef4444)" }}
         >
-          다시 시도
+          {t("quiz.retry")}
         </motion.button>
       </div>
     );

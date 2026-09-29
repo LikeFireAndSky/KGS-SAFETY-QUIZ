@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { getS3ImageUrl, getBtnVariant, getGrade } from "@/lib/utils";
+import { MESSAGES } from "@/lib/i18n";
 
 // ── getS3ImageUrl ────────────────────────────────────────
 describe("getS3ImageUrl", () => {
@@ -50,24 +51,24 @@ describe("getBtnVariant", () => {
 describe("getGrade", () => {
   it("5/5 → 가스안전 퀴즈왕!", () => {
     const g = getGrade(5, 5);
-    expect(g.label).toBe("가스안전 퀴즈왕!");
+    expect(MESSAGES.ko[g.labelKey]).toBe("가스안전 퀴즈왕!");
     expect(g.emoji).toBe("🏆");
   });
 
   it("4/5 → 가스안전 전문가!", () => {
-    expect(getGrade(4, 5).label).toBe("가스안전 전문가!");
+    expect(MESSAGES.ko[getGrade(4, 5).labelKey]).toBe("가스안전 전문가!");
   });
 
   it("3/5 → 훌륭해요!", () => {
-    expect(getGrade(3, 5).label).toBe("훌륭해요!");
+    expect(MESSAGES.ko[getGrade(3, 5).labelKey]).toBe("훌륭해요!");
   });
 
   it("2/5 → 조금 더 공부해봐요", () => {
-    expect(getGrade(2, 5).label).toBe("조금 더 공부해봐요");
+    expect(MESSAGES.ko[getGrade(2, 5).labelKey]).toBe("조금 더 공부해봐요");
   });
 
   it("1/5 → 안전 교육이 필요해요", () => {
-    expect(getGrade(1, 5).label).toBe("안전 교육이 필요해요");
+    expect(MESSAGES.ko[getGrade(1, 5).labelKey]).toBe("안전 교육이 필요해요");
   });
 
   it("0/0 처럼 total이 0이어도 크래시 없음", () => {

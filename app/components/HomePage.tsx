@@ -5,6 +5,9 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { getCompletions, getNextQuiz, type QuizCompletion } from "@/lib/quizStorage";
+import type { MessageKey } from "@/lib/i18n";
+import { useLanguage } from "@/app/i18n/LanguageProvider";
+import LanguageSelector from "./LanguageSelector";
 
 const MotionLink = motion(Link);
 
@@ -21,55 +24,64 @@ const BUBBLES = [
   { size: 12, left: "35%", delay: 3.5, duration: 7 },
 ];
 
-const CATEGORIES = [
+const CATEGORIES: {
+  icon: string;
+  titleKey: MessageKey;
+  descriptionKey: MessageKey;
+  questions: number;
+  accentColor: string;
+  badgeKey: MessageKey;
+  href: string | null;
+  quizName: string | null;
+}[] = [
   {
     icon: "🏠",
-    title: "가정 가스 안전",
-    description: "가정에서 가스를 올바르고 안전하게 사용하는 방법",
+    titleKey: "home.cat.home.title",
+    descriptionKey: "home.cat.home.description",
     questions: 5,
     accentColor: "#3b82f6",
-    badge: "기초",
+    badgeKey: "home.badge.basic",
     href: "/quiz/home-gas",
     quizName: "home-gas-safety",
   },
   {
     icon: "🍳",
-    title: "식당 가스 안전",
-    description: "식당·음식점에서 반드시 알아야 할 가스 안전 수칙",
+    titleKey: "home.cat.restaurant.title",
+    descriptionKey: "home.cat.restaurant.description",
     questions: 5,
     accentColor: "#f97316",
-    badge: "기초",
+    badgeKey: "home.badge.basic",
     href: "/quiz/restaurant-gas",
     quizName: "restaurant-gas-safety",
   },
   {
     icon: "🌧️",
-    title: "장마철 가스 안전",
-    description: "장마철 침수·강풍 상황에서 반드시 알아야 할 가스 안전 수칙",
+    titleKey: "home.cat.rainy.title",
+    descriptionKey: "home.cat.rainy.description",
     questions: 5,
     accentColor: "#6366f1",
-    badge: "시즌",
+    badgeKey: "home.badge.season",
     href: "/quiz/rainy-season-gas",
     quizName: "rainy-season-gas-safety",
   },
   {
     icon: "📋",
-    title: "안전 규정 & 법규",
-    description: "가스 관련 안전 법규와 기준에 대한 이해",
+    titleKey: "home.cat.law.title",
+    descriptionKey: "home.cat.law.description",
     questions: 12,
     accentColor: "#8b5cf6",
-    badge: "심화",
+    badgeKey: "home.badge.advanced",
     href: null,
     quizName: null,
   },
 ];
 
-const SAFETY_TIPS = [
-  "💡 가스 누출 의심 시 즉시 환기하고 점화원을 멀리하세요",
-  "🔒 외출 전 가스 밸브가 잠겼는지 반드시 확인하세요",
-  "📞 가스 사고 시 119 또는 가스안전공사(1544-4500)에 신고하세요",
-  "🔧 가스 기기는 정기적으로 전문업체에 점검받으세요",
-  "⚠️ 가스 기기 주변에 가연성 물질을 두지 마세요",
+const SAFETY_TIPS: MessageKey[] = [
+  "home.tip.1",
+  "home.tip.2",
+  "home.tip.3",
+  "home.tip.4",
+  "home.tip.5",
 ];
 
 
@@ -111,6 +123,7 @@ function CardInner({
   available: boolean;
   completion?: QuizCompletion;
 }) {
+  const { t, lang } = useLanguage();
   const isDone = !!completion;
 
   return (
@@ -120,19 +133,19 @@ function CardInner({
       </span>
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 mb-2 flex-wrap">
-          <h3 className="text-base sm:text-lg font-bold text-white">{cat.title}</h3>
+          <h3 className="text-base sm:text-lg font-bold text-white">{t(cat.titleKey)}</h3>
           <span
             className="text-xs px-2 py-0.5 rounded-full font-semibold text-white shrink-0"
             style={{ background: cat.accentColor }}
           >
-            {cat.badge}
+            {t(cat.badgeKey)}
           </span>
           {isDone && (
             <span
               className="text-xs px-2 py-0.5 rounded-full font-semibold shrink-0"
               style={{ background: "rgba(34,197,94,0.2)", color: "#4ade80", border: "1px solid rgba(34,197,94,0.35)" }}
             >
-              ✓ 완료
+              {t("home.card.done")}
             </span>
           )}
           {!available && !isDone && (
@@ -140,16 +153,16 @@ function CardInner({
               className="text-xs px-2 py-0.5 rounded-full font-semibold text-blue-300 shrink-0"
               style={{ background: "rgba(96,165,250,0.1)", border: "1px solid rgba(96,165,250,0.25)" }}
             >
-              준비 중
+              {t("home.card.comingSoon")}
             </span>
           )}
         </div>
-        <p className="text-sm text-blue-200/80 mb-4 leading-relaxed">{cat.description}</p>
+        <p className="text-sm text-blue-200/80 mb-4 leading-relaxed">{t(cat.descriptionKey)}</p>
         <div className="flex items-center justify-between">
-          <span className="text-xs text-blue-400">{cat.questions}문제</span>
+          <span className="text-xs text-blue-400">{t("home.card.questions", { n: cat.questions })}</span>
           {available && (
             <span className="text-sm font-semibold flex items-center gap-1" style={{ color: isDone ? "#4ade80" : cat.accentColor }}>
-              {isDone ? "다시 도전" : "도전하기"}
+              {isDone ? t("home.card.retry") : t("home.card.challenge")}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
               </svg>
@@ -158,7 +171,11 @@ function CardInner({
         </div>
         {isDone && (
           <p className="text-xs text-green-400/70 mt-1">
-            {completion.score}/{completion.totalQuestions}점 · {new Date(completion.completedAt).toLocaleDateString("ko-KR")} 완료
+            {t("home.card.completedOn", {
+              score: completion.score,
+              total: completion.totalQuestions,
+              date: new Date(completion.completedAt).toLocaleDateString(lang),
+            })}
           </p>
         )}
       </div>
@@ -167,6 +184,7 @@ function CardInner({
 }
 
 export default function HomePage() {
+  const { t } = useLanguage();
   const router = useRouter();
   const [tipIndex, setTipIndex] = useState(0);
   const [completions, setCompletions] = useState<Record<string, QuizCompletion>>({});
@@ -248,15 +266,15 @@ export default function HomePage() {
           </motion.div>
           <div>
             <p className="text-xs text-blue-300 font-medium">
-              강원영동
+              {t("home.region")}
             </p>
-            <p className="text-sm font-bold text-white">가스안전 퀴즈</p>
+            <p className="text-sm font-bold text-white">{t("home.appName")}</p>
           </div>
         </div>
 
         <nav className="hidden md:flex items-center gap-6 text-sm text-blue-200">
           <a href="#categories" className="hover:text-white transition-colors">
-            카테고리
+            {t("home.nav.categories")}
           </a>
           <a
             href="https://m.blog.naver.com/PostList.naver?blogId=kgs_safety&tab=1"
@@ -264,7 +282,7 @@ export default function HomePage() {
             rel="noopener noreferrer"
             className="hover:text-white transition-colors"
           >
-            안전 정보
+            {t("home.nav.safetyInfo")}
           </a>
           <motion.button
             type="button"
@@ -277,27 +295,30 @@ export default function HomePage() {
               boxShadow: "0 0 15px rgba(249,115,22,0.3)",
             }}
           >
-            시작하기
+            {t("home.nav.start")}
           </motion.button>
         </nav>
 
-        <button type="button" className="md:hidden text-white p-1" aria-label="메뉴 열기">
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
+        <div className="flex items-center gap-3">
+          <LanguageSelector />
+          <button type="button" className="md:hidden text-white p-1" aria-label={t("home.nav.openMenu")}>
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
       </motion.header>
 
       {/* Hero Section */}
@@ -422,7 +443,7 @@ export default function HomePage() {
                 color: "#fb923c",
               }}
             >
-              ✦ 강원영동 가스안전 퀴즈 ✦
+              {t("home.hero.badge")}
             </span>
           </motion.div>
 
@@ -437,7 +458,7 @@ export default function HomePage() {
               backgroundClip: "text",
             }}
           >
-            가스안전
+            {t("home.hero.title1")}
           </motion.h1>
           <motion.h1
             variants={itemVariants}
@@ -450,18 +471,25 @@ export default function HomePage() {
               backgroundClip: "text",
             }}
           >
-            퀴즈왕 🏆
+            {t("home.hero.title2")}
           </motion.h1>
           <motion.p
             variants={itemVariants}
             className="text-base sm:text-lg text-blue-200 max-w-lg mx-auto leading-relaxed"
           >
-            가스 생활 안전에 대해 얼마나 알고 계신가요?
+            {t("home.hero.line1")}
             <br />
-            <span className="text-white font-semibold">재미있는 퀴즈</span>로
-            안전 지식을 확인하고{" "}
-            <span className="text-orange-400 font-semibold">퀴즈왕</span>에
-            도전하세요!
+            {t("home.hero.line2")
+              .split(/(\{funQuiz\}|\{quizKing\})/)
+              .map((part, i) =>
+                part === "{funQuiz}" ? (
+                  <span key={i} className="text-white font-semibold">{t("home.hero.funQuiz")}</span>
+                ) : part === "{quizKing}" ? (
+                  <span key={i} className="text-orange-400 font-semibold">{t("home.hero.quizKing")}</span>
+                ) : (
+                  part
+                )
+              )}
           </motion.p>
         </motion.div>
 
@@ -486,7 +514,7 @@ export default function HomePage() {
               boxShadow: "0 0 24px rgba(249,115,22,0.35)",
             }}
           >
-            <span aria-hidden="true">🚀</span> 퀴즈 시작하기
+            <span aria-hidden="true">🚀</span> {t("home.startQuiz")}
           </motion.button>
           <motion.a
             href="https://m.blog.naver.com/PostList.naver?blogId=kgs_safety&tab=1"
@@ -503,7 +531,7 @@ export default function HomePage() {
               backdropFilter: "blur(8px)",
             }}
           >
-            <span aria-hidden="true">📖</span>&nbsp;안전 정보 보기
+            <span aria-hidden="true">📖</span>&nbsp;{t("home.viewSafetyInfo")}
           </motion.a>
         </motion.div>
 
@@ -521,7 +549,7 @@ export default function HomePage() {
         >
           <div className="flex items-center gap-3">
             <span className="text-xs font-bold text-orange-400 shrink-0 tracking-widest uppercase">
-              안전 TIP
+              {t("home.tip.label")}
             </span>
             <div
               style={{
@@ -541,7 +569,7 @@ export default function HomePage() {
                   transition={{ duration: 0.4 }}
                   className="text-sm text-blue-100 text-left"
                 >
-                  {SAFETY_TIPS[tipIndex]}
+                  {t(SAFETY_TIPS[tipIndex])}
                 </motion.p>
               </AnimatePresence>
             </div>
@@ -560,10 +588,10 @@ export default function HomePage() {
             className="text-center mb-10"
           >
             <h2 className="text-3xl md:text-4xl font-black text-white mb-3">
-              퀴즈 카테고리
+              {t("home.categories.title")}
             </h2>
             <p className="text-blue-300">
-              원하는 분야를 선택하고 도전해보세요!
+              {t("home.categories.subtitle")}
             </p>
           </motion.div>
 
@@ -652,10 +680,10 @@ export default function HomePage() {
             }}
           />
           <h2 className="text-2xl sm:text-3xl font-black text-white mb-3">
-            지금 바로 도전해보세요!
+            {t("home.cta.title")}
           </h2>
           <p className="text-blue-200 mb-8 max-w-md mx-auto">
-            가스 안전 지식을 테스트하고 안전한 가스 생활 습관을 만들어보세요.
+            {t("home.cta.subtitle")}
           </p>
           <motion.button
             type="button"
@@ -671,7 +699,7 @@ export default function HomePage() {
               boxShadow: "0 0 24px rgba(249,115,22,0.35)",
             }}
           >
-            <span aria-hidden="true">🚀</span> 퀴즈 시작하기
+            <span aria-hidden="true">🚀</span> {t("home.startQuiz")}
           </motion.button>
         </motion.div>
       </section>
@@ -698,19 +726,19 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-sm font-bold text-white">
-                강원영동 가스안전 퀴즈
+                {t("home.footer.title")}
               </p>
               <p className="text-xs text-blue-400">
-                가스안전 퀴즈왕 · YeongDong Gas Safety
+                {t("home.footer.subtitle")}
               </p>
             </div>
           </div>
           <div className="text-center md:text-right">
             <p className="text-xs text-blue-300">
-              📞 1544-4500 (가스 누출 신고 · 24시간)
+              {t("home.footer.hotline")}
             </p>
             <p className="text-xs text-blue-500 mt-1">
-              © 2026 강원영동 가스안전 퀴즈. All rights reserved.
+              {t("home.footer.copyright")}
             </p>
           </div>
         </div>

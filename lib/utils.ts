@@ -1,3 +1,5 @@
+import type { MessageKey } from "@/lib/i18n";
+
 const S3_BASE =
   "https://kgs-safety-quiz-bucket.s3.ap-northeast-2.amazonaws.com";
 
@@ -28,11 +30,11 @@ export function getBtnVariant(
 export function getGrade(
   score: number,
   total: number
-): { emoji: string; label: string; color: string } {
+): { emoji: string; labelKey: MessageKey; color: string } {
   const ratio = total > 0 ? score / total : 0;
-  if (ratio === 1) return { emoji: "🏆", label: "가스안전 퀴즈왕!", color: "#fbbf24" };
-  if (ratio >= 0.8) return { emoji: "⭐", label: "가스안전 전문가!", color: "#60a5fa" };
-  if (ratio >= 0.6) return { emoji: "👍", label: "훌륭해요!", color: "#34d399" };
-  if (ratio >= 0.4) return { emoji: "📚", label: "조금 더 공부해봐요", color: "#f97316" };
-  return { emoji: "⚠️", label: "안전 교육이 필요해요", color: "#ef4444" };
+  if (ratio === 1) return { emoji: "🏆", labelKey: "grade.perfect", color: "#fbbf24" };
+  if (ratio >= 0.8) return { emoji: "⭐", labelKey: "grade.expert", color: "#60a5fa" };
+  if (ratio >= 0.6) return { emoji: "👍", labelKey: "grade.great", color: "#34d399" };
+  if (ratio >= 0.4) return { emoji: "📚", labelKey: "grade.study", color: "#f97316" };
+  return { emoji: "⚠️", labelKey: "grade.needTraining", color: "#ef4444" };
 }
