@@ -1,7 +1,7 @@
 import type { Messages } from "./ko";
 
 const ne: Messages = {
-  "lang.select": "भाषा छान्नुहोस्",
+  "lang.change": "भाषा परिवर्तन",
 
   "home.region": "गाङ्वोन योङदोङ",
   "home.appName": "ग्यास सुरक्षा क्विज",

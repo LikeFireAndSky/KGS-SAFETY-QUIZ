@@ -10,13 +10,13 @@ export type { MessageKey, Messages };
 
 /** 지원 언어 — 언어 추가 시 locales/에 파일을 만들고 여기와 MESSAGES에 등록 */
 export const LANGUAGES = [
-  { code: "ko", label: "한국어" },
-  { code: "en", label: "English" },
-  { code: "zh", label: "中文" },
-  { code: "ja", label: "日本語" },
-  { code: "vi", label: "Tiếng Việt" },
-  { code: "lo", label: "ລາວ" },
-  { code: "ne", label: "नेपाली" },
+  { code: "ko", label: "한국어", flag: "🇰🇷" },
+  { code: "en", label: "English", flag: "🇺🇸" },
+  { code: "zh", label: "中文", flag: "🇨🇳" },
+  { code: "ja", label: "日本語", flag: "🇯🇵" },
+  { code: "vi", label: "Tiếng Việt", flag: "🇻🇳" },
+  { code: "lo", label: "ລາວ", flag: "🇱🇦" },
+  { code: "ne", label: "नेपाली", flag: "🇳🇵" },
 ] as const;
 
 export type Lang = (typeof LANGUAGES)[number]["code"];

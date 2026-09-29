@@ -1,7 +1,7 @@
 import type { Messages } from "./ko";
 
 const vi: Messages = {
-  "lang.select": "Chọn ngôn ngữ",
+  "lang.change": "Đổi ngôn ngữ",
 
   "home.region": "Gangwon Yeongdong",
   "home.appName": "Đố vui an toàn khí gas",

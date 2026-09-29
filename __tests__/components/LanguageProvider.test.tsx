@@ -36,10 +36,20 @@ describe("LanguageProvider", () => {
 
   it("언어를 바꾸면 문구와 html lang이 바뀌고 localStorage에 저장된다", async () => {
     renderWithProvider();
-    await userEvent.selectOptions(screen.getByRole("combobox", { name: "언어 선택" }), "en");
+    await userEvent.selectOptions(screen.getByRole("combobox", { name: "언어 변경" }), "en");
     expect(screen.getByText("Next question →")).toBeInTheDocument();
     expect(document.documentElement.lang).toBe("en");
     expect(localStorage.getItem("kgs_lang")).toBe("en");
+  });
+
+  it("안내 문구와 국기가 붙은 언어 목록을 보여주고, 안내 문구도 선택한 언어로 바뀐다", async () => {
+    renderWithProvider();
+    expect(screen.getByText("언어 변경")).toBeInTheDocument();
+    expect(screen.getByRole("option", { name: "🇰🇷 한국어" })).toBeInTheDocument();
+    expect(screen.getByRole("option", { name: "🇳🇵 नेपाली" })).toBeInTheDocument();
+
+    await userEvent.selectOptions(screen.getByRole("combobox"), "en");
+    expect(screen.getByRole("combobox", { name: "Change language" })).toBeInTheDocument();
   });
 
   it("저장된 언어를 불러온다", async () => {

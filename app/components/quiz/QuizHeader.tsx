@@ -57,20 +57,12 @@ export default function QuizHeader({
 
         <span className="text-sm font-bold text-white">{title}</span>
 
-        <div className="flex items-center gap-2">
-          <LanguageSelector />
-          <span
-            className="text-sm font-semibold text-blue-300"
-            aria-live="polite"
-          >
-            {index + 1} / {total}
-          </span>
-        </div>
+        <LanguageSelector />
       </motion.header>
 
-      {/* Progress dots */}
-      <div className="px-5 pt-4 pb-1 shrink-0">
-        <div className="flex gap-1.5 mb-1" aria-hidden="true">
+      {/* Progress dots + 진행 카운터 */}
+      <div className="px-5 pt-4 pb-1 shrink-0 flex items-center gap-3">
+        <div className="flex flex-1 gap-1.5 mb-1" aria-hidden="true">
           {Array.from({ length: total }, (_, i) => (
             <motion.div
               key={i}
@@ -87,6 +79,12 @@ export default function QuizHeader({
             />
           ))}
         </div>
+        <span
+          className="text-sm font-semibold text-blue-300 shrink-0"
+          aria-live="polite"
+        >
+          {index + 1} / {total}
+        </span>
       </div>
     </>
   );

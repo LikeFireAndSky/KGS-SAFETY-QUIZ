@@ -1,7 +1,7 @@
 import type { Messages } from "./ko";
 
 const en: Messages = {
-  "lang.select": "Select language",
+  "lang.change": "Change language",
 
   "home.region": "Gangwon Yeongdong",
   "home.appName": "Gas Safety Quiz",

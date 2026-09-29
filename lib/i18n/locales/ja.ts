@@ -1,7 +1,7 @@
 import type { Messages } from "./ko";
 
 const ja: Messages = {
-  "lang.select": "言語を選択",
+  "lang.change": "言語を変更",
 
   "home.region": "江原嶺東",
   "home.appName": "ガス安全クイズ",

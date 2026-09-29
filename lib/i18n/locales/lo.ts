@@ -1,7 +1,7 @@
 import type { Messages } from "./ko";
 
 const lo: Messages = {
-  "lang.select": "ເລືອກພາສາ",
+  "lang.change": "ປ່ຽນພາສາ",
 
   "home.region": "ຄັງວອນ ຢອງດົງ",
   "home.appName": "ຄຳຖາມຄວາມປອດໄພແກັສ",

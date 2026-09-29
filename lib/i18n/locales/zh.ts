@@ -1,7 +1,7 @@
 import type { Messages } from "./ko";
 
 const zh: Messages = {
-  "lang.select": "选择语言",
+  "lang.change": "更改语言",
 
   "home.region": "江原岭东",
   "home.appName": "燃气安全问答",
