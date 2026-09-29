@@ -8,7 +8,7 @@ import type { Quiz } from "@/lib/types";
 const SEED_FILES = [
   "db-seed/KGS-Safety-Quiz_home-gas-safety.json",
   "db-seed/KGS-Safety-Quiz_rainy-season-gas-safety.json",
-  "scripts/seed-restaurant-gas-safety.json",
+  "db-seed/KGS-Safety-Quiz_restaurant-gas-safety.json",
 ];
 
 const TARGET_LANGS = LANGUAGES.map((l) => l.code).filter((c) => c !== "ko");

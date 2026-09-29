@@ -8,6 +8,9 @@ import type { QuizQuestion } from "@/lib/types";
 import { useLanguage } from "@/app/i18n/LanguageProvider";
 import ParticipantForm from "./ParticipantForm";
 
+/** 경품 응모 이벤트 진행 중인 퀴즈 (예: "rainy-season-gas-safety"). null 이면 응모 버튼 숨김 */
+const RAFFLE_QUIZ_NAME: string | null = null;
+
 interface Props {
   score: number;
   questions: QuizQuestion[];
@@ -125,7 +128,7 @@ export default function QuizResult({
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.65 }}
-        className={`w-full mb-5${quizName !== "rainy-season-gas-safety" ? " hidden" : ""}`}
+        className={`w-full mb-5${quizName !== RAFFLE_QUIZ_NAME ? " hidden" : ""}`}
       >
         <AnimatePresence mode="wait">
           {showForm ? (
